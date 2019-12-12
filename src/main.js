@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import App from "./App.vue";
-import './scss/init.scss';
+
+import Plugin from './plugin.js';
+
+Vue.use(Plugin);
 
 new Vue({
     // router,

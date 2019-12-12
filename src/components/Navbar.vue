@@ -1,6 +1,6 @@
 <template>
-    <nav class="pp-navbar">
-        <div class="pp-navbar__title">
+    <nav class="v-navbar">
+        <div class="v-navbar__title">
             <slot name="header"></slot>
 
         </div>
@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name: 'pp-button',
+    name: 'v-button',
 }
 </script>
 

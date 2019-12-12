@@ -6,11 +6,13 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-lib": "vue-cli-service build --target lib --name vuepp src/lib.js",
+    "build-lib": "vue-cli-service build --target lib --name vuepp src/plugin.js",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.4.3",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
