@@ -1,18 +1,17 @@
 <template>
-    <button class="v-button py-1 px-2"
-        :class="[getColorClass]">
+    <span class="v-badge px-1" :class="[getColorClass]">
         <slot></slot>
-    </button>
+    </span>
 </template>
 
 <script>
 export default {
-    name: 'v-button',
+    name: 'v-badge',
     props: ['color'],
     computed: {
         getColorClass() {
             if (['primary', 'secundary', 'info', 'success', 'danger', 'warning'].indexOf(this.color) > -1) {
-                return 'v-button-' + this.color;
+                return 'v-badge-' + this.color;
             }
             return '';
         }
@@ -21,7 +20,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.v-button {
+.v-badge {
     color: var(--global-text-color-dark);
     background-color: var(--global-bg-color-default);
     border-radius: var(--layout-radius);

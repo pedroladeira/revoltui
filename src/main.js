@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from "./App.vue";
-
 import Plugin from './plugin.js';
+import '@/assets/scss/main.scss';
 
 Vue.use(Plugin);
 
