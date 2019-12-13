@@ -1,7 +1,6 @@
 {
   "name": "vuepp",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
   "main": "./dist/vuepp.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",

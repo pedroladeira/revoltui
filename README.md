@@ -1,24 +1,22 @@
-# vuepp
+# Vue++
 
-## Project setup
-```
-yarn install
-```
+## Add vue++ to your project
 
-### Compiles and hot-reloads for development
+with npm
 ```
-yarn serve
+npm add vuepp
 ```
 
-### Compiles and minifies for production
+with yarn
 ```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
+yarn add vuepp
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Include vue++ in your project
+
+```javascript
+import Vue from 'vue';
+import Vuepp from 'vuepp';
+
+Vue.use(Vuepp);
+```
