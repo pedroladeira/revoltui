@@ -22,8 +22,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 .v-navbar {
-    box-shadow: var(--border-shadow);
+    box-shadow: var(--navbar-box-shadow);
     height: var(--navbar-height);
+    background-color: var(--navbar-bg-color);
 
     &__title {
         width: var(--navbar-title-width);

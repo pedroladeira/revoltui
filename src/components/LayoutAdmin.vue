@@ -43,6 +43,7 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
+    background-color: var(--layout-bg-color);
 
     &__container {
         height: calc(100% - var(--navbar-height));
@@ -54,10 +55,10 @@ export default {
         overflow: none;
         overflow-y: scroll;
         box-shadow: var(--border-shadow);
+        background-color: var(--layout-aside-bg-color);
     }
 
     &__content {
-        background-color: var(--theme-bg-color);
         overflow: scroll;
     }
 }

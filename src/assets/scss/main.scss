@@ -2,7 +2,7 @@
 
 :root {
     /* Theme */
-    --theme-bg-color: #f9f9f9;
+    --theme-bg-color: #f1f4f6;
 
     /* Text */
     --global-text-color-light: #fff;
@@ -12,7 +12,7 @@
     --global-border-color-light: #fff;
     --global-border-color-dark: #000;
 
-    /* Background */
+    /* Background Colors */
     --global-bg-color-default: #fff;
     --global-bg-color-primary: #663399;
     --global-bg-color-secundary: #300;
@@ -24,6 +24,8 @@
     /* Layouts */
     --layout-aside-width: 250px;
     --layout-radius: 4px;
+    --layout-bg-color: #f1f4f6;
+    --layout-aside-bg-color: #ffffff;
 
     /* Shadow */
     --border-shadow: 0 1px 15px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
@@ -31,6 +33,11 @@
     /* Navbar */
     --navbar-height: 60px;
     --navbar-title-width: var(--layout-aside-width);
+    --navbar-bg-color: #fafbfc;
+    --navbar-box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+        0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+        0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+        0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
 
     /* Card */
     --card-border-width: 10px;
