@@ -42,8 +42,8 @@ export default {
 .v-card {
     color: var(--global-text-color-dark);
     background-color: var(--global-bg-color-default);
-    border-radius: var(--card-border-width);
-    box-shadow: var(--border-shadow);
+    border-radius: var(--theme-border-radius);
+    box-shadow: var(--card-box-shadow);
     overflow: hidden;
 
 
