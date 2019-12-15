@@ -1,0 +1,116 @@
+$theme-bg-color: #f1f4f6;
+$theme-blue: #007bff;
+$theme-indigo: #6610f2;
+$theme-purple: #6f42c1;
+$theme-pink: #e83e8c;
+$theme-red: #dc3545;
+$theme-orange: #fd7e14;
+$theme-yellow: #ffc107;
+$theme-green: #28a745;
+$theme-teal: #20c997;
+$theme-cyan: #17a2b8;
+$theme-white: #fff;
+$theme-gray: #6c757d;
+$theme-gray-dark: #343a40;
+$theme-primary: #3f6ad8;
+$theme-secondary: #6c757d;
+$theme-success: #3ac47d;
+$theme-info: #16aaff;
+$theme-warning: #f7b924;
+$theme-danger: #d92550;
+$theme-light: #eeeeee;
+$theme-dark: #343a40;
+$theme-focus: #444054;
+$theme-alternate: #794c8a;
+$theme-breakpoint-xs: 0;
+$theme-breakpoint-sm: 576px;
+$theme-breakpoint-md: 768px;
+$theme-breakpoint-lg: 992px;
+$theme-breakpoint-xl: 1200px;
+$theme-border-radius: .25rem;
+$theme-box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.03),
+    0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.03),
+    0 0.25rem 0.53125rem rgba(4, 9, 20, 0.05),
+    0 0.125rem 0.1875rem rgba(4, 9, 20, 0.03);
+
+
+
+:root {
+    /* Theme */
+    --theme-bg-color: #{$theme-bg-color};
+    --theme-blue: #{$theme-blue};
+    --theme-indigo: #{$theme-indigo};
+    --theme-purple: #{$theme-purple};
+    --theme-pink: #{$theme-pink};
+    --theme-red: #{$theme-red};
+    --theme-orange: #{$theme-orange};
+    --theme-yellow: #{$theme-yellow};
+    --theme-green: #{$theme-green};
+    --theme-teal: #{$theme-teal};
+    --theme-cyan: #{$theme-cyan};
+    --theme-white: #{$theme-white};
+    --theme-gray: #{$theme-gray};
+    --theme-gray-dark: #{$theme-gray-dark};
+    --theme-primary: #{$theme-primary};
+    --theme-secondary: #{$theme-secondary};
+    --theme-success: #{$theme-success};
+    --theme-info: #{$theme-info};
+    --theme-warning: #{$theme-warning};
+    --theme-danger: #{$theme-danger};
+    --theme-light: #{$theme-light};
+    --theme-dark: #{$theme-dark};
+    --theme-focus: #{$theme-focus};
+    --theme-alternate: #{$theme-alternate};
+    --theme-breakpoint-xs: #{$theme-breakpoint-xs};
+    --theme-breakpoint-sm: #{$theme-breakpoint-sm};
+    --theme-breakpoint-md: #{$theme-breakpoint-md};
+    --theme-breakpoint-lg: #{$theme-breakpoint-lg};
+    --theme-breakpoint-xl: #{$theme-breakpoint-xl};
+    --theme-border-radius: #{$theme-border-radius};
+    --theme-box-shadow: #{$theme-box-shadow};
+
+
+    /* Text */
+    --global-text-color-light: #fff;
+    --global-text-color-dark: #495057;
+
+    /* Border */
+    --global-border-color-light: #fff;
+    --global-border-color-dark: #000;
+
+    /* Background Colors */
+    --global-bg-color-default: #fff;
+    --global-bg-color-primary: var(--theme-primary);
+    --global-bg-color-secondary: var(--theme-secondary);
+    --global-bg-color-success: var(--theme-success);
+    --global-bg-color-danger: var(--theme-danger);
+    --global-bg-color-warning: var(--theme-warning);
+    --global-bg-color-info: var(--theme-info);
+    --global-bg-color-default-hover: scale-color(#fff, $lightness: -15%);
+    // --global-bg-color-primary-hover: scale-color(var(--theme-primary), $lightness: -15%);
+    --global-bg-color-primary-hover: scale-color(#E0E3E4, $lightness: 5%);
+    --global-bg-color-secondary-hover: scale-color(var(--theme-secondary), $lightness: -15%);
+    --global-bg-color-success-hover: scale-color(var(--theme-success), $lightness: -15%);
+    --global-bg-color-danger-hover: scale-color(var(--theme-danger), $lightness: -15%);
+    --global-bg-color-warning-hover: scale-color(var(--theme-warning), $lightness: -15%);
+    --global-bg-color-info-hover: scale-color(var(--theme-info), $lightness: -15%);
+
+    /* Layouts */
+    --layout-aside-width: 250px;
+    --layout-radius: 4px;
+    --layout-bg-color: #f1f4f6;
+    --layout-aside-bg-color: #ffffff;
+
+    /* Shadow */
+    --border-shadow: 0 1px 15px rgba(0, 0, 0, 0.04), 0 1px 6px rgba(0, 0, 0, 0.04);
+
+    /* Navbar */
+    --navbar-height: 60px;
+    --navbar-title-width: var(--layout-aside-width);
+    --navbar-bg-color: #fafbfc;
+    --navbar-box-shadow: var(--theme-box-shadow);
+
+    /* Card */
+    --card-padding-width: 1.25rem;
+    --card-box-shadow: var(--theme-box-shadow);
+}

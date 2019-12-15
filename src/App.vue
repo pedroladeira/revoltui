@@ -17,18 +17,28 @@
                         <div class="flex">
                             <div class="flex-none px-1"><v-button>Default</v-button></div>
                             <div class="flex-none px-1"><v-button color="primary">Primary</v-button></div>
-                            <div class="flex-none px-1"><v-button color="secundary">Secundary</v-button></div>
+                            <div class="flex-none px-1"><v-button color="secondary">Secondary</v-button></div>
                             <div class="flex-none px-1"><v-button color="success">Success</v-button></div>
                             <div class="flex-none px-1"><v-button color="info">Info</v-button></div>
                             <div class="flex-none px-1"><v-button color="danger">Danger</v-button></div>
                             <div class="flex-none px-1"><v-button color="warning">Warning</v-button></div>
                         </div>
+                        <div class="flex mt-4">
+                            <div class="flex-none px-1"><v-button :no-shadow="true">Default</v-button></div>
+                            <div class="flex-none px-1"><v-button :no-shadow="true" color="primary">Primary</v-button></div>
+                            <div class="flex-none px-1"><v-button :no-shadow="true" color="secondary">Secondary</v-button></div>
+                            <div class="flex-none px-1"><v-button :no-shadow="true" color="success">Success</v-button></div>
+                            <div class="flex-none px-1"><v-button :no-shadow="true" color="info">Info</v-button></div>
+                            <div class="flex-none px-1"><v-button :no-shadow="true" color="danger">Danger</v-button></div>
+                            <div class="flex-none px-1"><v-button :no-shadow="true" color="warning">Warning</v-button></div>
+                        </div>
+
                         <div slot="footer">
                             <p>
                                 <strong>:color</strong>
                             </p>
                             <p class="text-sm">
-                                default, primary, secundary, success, info, danger, warning
+                                default, primary, secondary, success, info, danger, warning
                             </p>
                         </div>
                     </v-card>
@@ -39,7 +49,7 @@
                         <div class="flex">
                             <div class="flex-none px-1"><v-badge>Default</v-badge></div>
                             <div class="flex-none px-1"><v-badge color="primary">Primary</v-badge></div>
-                            <div class="flex-none px-1"><v-badge color="secundary">Secundary</v-badge></div>
+                            <div class="flex-none px-1"><v-badge color="secondary">secondary</v-badge></div>
                             <div class="flex-none px-1"><v-badge color="success">Success</v-badge></div>
                             <div class="flex-none px-1"><v-badge color="info">Info</v-badge></div>
                             <div class="flex-none px-1"><v-badge color="danger">Danger</v-badge></div>
@@ -50,7 +60,7 @@
                                 <strong>:color</strong>
                             </p>
                             <p class="text-sm">
-                                default, primary, secundary, success, info, danger, warning
+                                default, primary, secondary, success, info, danger, warning
                             </p>
                         </div>
                     </v-card>
@@ -72,7 +82,7 @@
                                 </v-card>
                             </div>
                             <div class="w-1/4 p-1">
-                                <v-card color="secundary" title="Secundary">
+                                <v-card color="secondary" title="secondary">
                                     The conntent
                                     <div slot="footer">The footer</div>
                                 </v-card>
@@ -107,7 +117,7 @@
                                 <strong>:color</strong>
                             </p>
                             <p class="text-sm">
-                                default, primary, secundary, success, info, danger, warning
+                                default, primary, secondary, success, info, danger, warning
                             </p>
                         </div>
                     </v-card>

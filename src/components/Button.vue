@@ -1,6 +1,6 @@
 <template>
     <button class="v-button py-1 px-2"
-        :class="[getColorClass]">
+        :class="[getColorClass, getShadowClass]">
         <slot></slot>
     </button>
 </template>
@@ -8,59 +8,20 @@
 <script>
 export default {
     name: 'v-button',
-    props: ['color'],
+    props: ['color', 'no-shadow'],
     computed: {
         getColorClass() {
-            if (['primary', 'secundary', 'info', 'success', 'danger', 'warning'].indexOf(this.color) > -1) {
+            if (['primary', 'secondary', 'info', 'success', 'danger', 'warning'].indexOf(this.color) > -1) {
                 return 'v-button-' + this.color;
+            }
+            return '';
+        },
+        getShadowClass() {
+            if (this.noShadow) {
+                return 'v-button-noshadow';
             }
             return '';
         }
     }
 }
 </script>
-
-<style lang="scss" scoped>
-.v-button {
-    color: var(--global-text-color-dark);
-    background-color: var(--global-bg-color-default);
-    border-radius: var(--layout-radius);
-    border: 1px solid var(--global-border-color-dark);
-
-    &-primary {
-        background-color: var(--global-bg-color-primary);
-        color: var(--global-text-color-light);
-        border: 1px solid var(--global-bg-color-primary);
-    }
-
-    &-secundary {
-        background-color: var(--global-bg-color-secundary);
-        color: var(--global-text-color-light);
-        border: 1px solid var(--global-bg-color-secundary);
-    }
-
-    &-success {
-        background-color: var(--global-bg-color-success);
-        color: var(--global-text-color-light);
-        border: 1px solid var(--global-bg-color-success);
-    }
-
-    &-info {
-        background-color: var(--global-bg-color-info);
-        color: var(--global-text-color-light);
-        border: 1px solid var(--global-bg-color-info);
-    }
-
-    &-danger {
-        background-color: var(--global-bg-color-danger);
-        color: var(--global-text-color-light);
-        border: 1px solid var(--global-bg-color-danger);
-    }
-
-    &-warning {
-        background-color: var(--global-bg-color-warning);
-        color: var(--global-text-color-light);
-        border: 1px solid var(--global-bg-color-warning);
-    }
-}
-</style>
