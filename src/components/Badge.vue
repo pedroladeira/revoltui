@@ -1,5 +1,5 @@
 <template>
-    <span class="v-badge px-1" :class="[getColorClass]">
+    <span class="v-badge uppercase" :class="[getColorClass]">
         <slot></slot>
     </span>
 </template>
@@ -10,7 +10,7 @@ export default {
     props: ['color'],
     computed: {
         getColorClass() {
-            if (['primary', 'secundary', 'info', 'success', 'danger', 'warning'].indexOf(this.color) > -1) {
+            if (['primary', 'secondary', 'info', 'success', 'danger', 'warning'].indexOf(this.color) > -1) {
                 return 'v-badge-' + this.color;
             }
             return '';
@@ -25,6 +25,11 @@ export default {
     background-color: var(--global-bg-color-default);
     border-radius: var(--layout-radius);
     border: 1px solid var(--global-border-color-dark);
+    padding: 5px 10px;
+    font-weight: bold;
+    font-size: 75%;
+    line-height: 1;
+    min-width: 19px;
 
     &-primary {
         background-color: var(--global-bg-color-primary);
@@ -32,10 +37,10 @@ export default {
         border: 1px solid var(--global-bg-color-primary);
     }
 
-    &-secundary {
-        background-color: var(--global-bg-color-secundary);
+    &-secondary {
+        background-color: var(--global-bg-color-secondary);
         color: var(--global-text-color-light);
-        border: 1px solid var(--global-bg-color-secundary);
+        border: 1px solid var(--global-bg-color-secondary);
     }
 
     &-success {
