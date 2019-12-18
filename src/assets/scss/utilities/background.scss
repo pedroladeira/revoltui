@@ -1,0 +1,7 @@
+.bg {
+    @each $var, $val in $colors {
+        &-#{$var} {
+            background-color: $val;
+        }
+    }
+}

@@ -1,7 +1,14 @@
+@import './variables/colors';
 @import './variables';
 
+@import './variants/clean';
+
+@import './utilities/sizes';
 @import './utilities/grid';
 @import './utilities/spaces';
+@import './utilities/text';
+@import './utilities/borders';
+@import './utilities/background';
 
 @import './components/buttons';
 
