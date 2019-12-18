@@ -1,0 +1,71 @@
+// Margins
+.m {   
+    @for $var from 0 to 10 {
+    
+        &-#{$var} {
+            margin: ($var / 10) em;
+        }
+        
+        &t-#{$var} {
+            margin-top: ($var / 10) em;
+        }
+        
+        &r-#{$var} {
+            margin-right: ($var / 10) em;
+        }
+        
+        &b-#{$var} {
+            margin-bottom: ($var / 10) em;
+        }
+        
+        &l-#{$var} {
+            margin-left: ($var / 10) em;
+        }
+        
+        &y-#{$var} {
+            margin-top: ($var / 10) em;
+            margin-bottom: ($var / 10) em;
+        }
+        
+        &x-#{$var} {
+            margin-left: ($var / 10) em;
+            margin-right: ($var / 10) em;
+        }
+    }
+}
+
+// Paddings
+.p {
+    @for $var from 0 to 10 {
+
+        &-#{$var} {
+            padding: ($var / 10) em;
+        }
+
+        &t-#{$var} {
+            padding-top: ($var / 10) em;
+        }
+
+        &r-#{$var} {
+            padding-right: ($var / 10) em;
+        }
+
+        &b-#{$var} {
+            padding-bottom: ($var / 10) em;
+        }
+
+        &l-#{$var} {
+            padding-left: ($var / 10) em;
+        }
+
+        &y-#{$var} {
+            padding-top: ($var / 10) em;
+            padding-bottom: ($var / 10) em;
+        }
+
+        &x-#{$var} {
+            padding-left: ($var / 10) em;
+            padding-right: ($var / 10) em;
+        }
+    }
+}

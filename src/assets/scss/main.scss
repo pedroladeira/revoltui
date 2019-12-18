@@ -1,6 +1,7 @@
-@import './tailwind.css';
+@import './variables';
 
-@import './variables.scss';
+@import './utilities/grid';
+@import './utilities/spaces';
 
 @import './components/buttons';
 

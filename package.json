@@ -6,7 +6,6 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "build-lib": "vue-cli-service build --dest dist --target lib --name vuepp src/plugin.js --formats commonjs",
-    "build-help": "vue-cli-service build --help",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -23,7 +22,6 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "style-loader": "^1.0.1",
-    "tailwindcss": "^1.1.4",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
