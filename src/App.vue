@@ -40,6 +40,12 @@
                             <p class="text-sm">
                                 default, primary, secondary, success, info, danger, warning
                             </p>
+                            <p class="mt-2">
+                                <strong>:no-shadow</strong>
+                            </p>
+                            <p class="text-sm">
+                                boolean #true #false
+                            </p>
                         </div>
                     </v-card>
                 </div>
