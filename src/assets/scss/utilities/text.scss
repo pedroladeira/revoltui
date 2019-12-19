@@ -1,0 +1,11 @@
+.text {
+    &-center {
+        text-align: center;
+    } 
+    
+    @each $var, $val in $colors {
+        &-#{$var} {
+            color: $val;
+        }
+    }
+} 

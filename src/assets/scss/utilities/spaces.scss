@@ -1,0 +1,73 @@
+$spaces-divisor: 4;
+
+// Margins
+.m {   
+    @for $var from 0 to 10 {
+    
+        &-#{$var} {
+            margin: ($var / $spaces-divisor) * 1rem;
+        }
+        
+        &t-#{$var} {
+            margin-top: ($var / $spaces-divisor) * 1rem;
+        }
+        
+        &r-#{$var} {
+            margin-right: ($var / $spaces-divisor) * 1rem;
+        }
+        
+        &b-#{$var} {
+            margin-bottom: ($var / $spaces-divisor) * 1rem;
+        }
+        
+        &l-#{$var} {
+            margin-left: ($var / $spaces-divisor) * 1rem;
+        }
+        
+        &y-#{$var} {
+            margin-top: ($var / $spaces-divisor) * 1rem;
+            margin-bottom: ($var / $spaces-divisor) * 1rem;
+        }
+        
+        &x-#{$var} {
+            margin-left: ($var / $spaces-divisor) * 1rem;
+            margin-right: ($var / $spaces-divisor) * 1rem;
+        }
+    }
+}
+
+// Paddings
+.p {
+    @for $var from 0 to 10 {
+
+        &-#{$var} {
+            padding: ($var / $spaces-divisor) * 1rem;
+        }
+
+        &t-#{$var} {
+            padding-top: ($var / $spaces-divisor) * 1rem;
+        }
+
+        &r-#{$var} {
+            padding-right: ($var / $spaces-divisor) * 1rem;
+        }
+
+        &b-#{$var} {
+            padding-bottom: ($var / $spaces-divisor) * 1rem;
+        }
+
+        &l-#{$var} {
+            padding-left: ($var / $spaces-divisor) * 1rem;
+        }
+
+        &y-#{$var} {
+            padding-top: ($var / $spaces-divisor) * 1rem;
+            padding-bottom: ($var / $spaces-divisor) * 1rem;
+        }
+
+        &x-#{$var} {
+            padding-left: ($var / $spaces-divisor) * 1rem;
+            padding-right: ($var / $spaces-divisor) * 1rem;
+        }
+    }
+}

@@ -11,6 +11,7 @@
     font-weight: 500;
     padding: 0.375rem 0.75rem;
     box-shadow: 0 0.125rem 0.625rem rgba(238, 238, 238, 0.4), 0 0.0625rem 0.125rem rgba(238, 238, 238, 0.5);
+    cursor: pointer;
 
     &-primary {
         box-shadow: 0 0.125rem 0.625rem rgba(63, 106, 216, 0.5), 0 0.0625rem 0.125rem rgba(63, 106, 216, 0.6);
@@ -19,7 +20,7 @@
         border-color: transparent;
 
         &:hover {
-            background-color: scale-color($theme-primary, $lightness: -15%);
+            background-color: scale-color($theme-color-primary, $lightness: -15%);
         }
     }
 
@@ -30,7 +31,7 @@
         border-color: transparent;
 
         &:hover {
-            background-color: scale-color($theme-secondary, $lightness: -15%);
+            background-color: scale-color($theme-color-secondary, $lightness: -15%);
         }
     }
 
@@ -41,7 +42,7 @@
         border-color: transparent;
 
         &:hover {
-            background-color: scale-color($theme-success, $lightness: -15%);
+            background-color: scale-color($theme-color-success, $lightness: -15%);
         }
     }
 
@@ -52,7 +53,7 @@
         border-color: transparent;
 
         &:hover {
-            background-color: scale-color($theme-info, $lightness: -15%);
+            background-color: scale-color($theme-color-info, $lightness: -15%);
         }
     }
 
@@ -63,7 +64,7 @@
         border-color: transparent;
 
         &:hover {
-            background-color: scale-color($theme-danger, $lightness: -15%);
+            background-color: scale-color($theme-color-danger, $lightness: -15%);
         }
     }
 
@@ -74,7 +75,7 @@
         border-color: transparent;
 
         &:hover {
-            background-color: scale-color($theme-warning, $lightness: -15%);
+            background-color: scale-color($theme-color-warning, $lightness: -15%);
         }
     }
 

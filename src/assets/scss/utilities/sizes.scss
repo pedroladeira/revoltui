@@ -1,0 +1,13 @@
+.w {
+    @for $var from 1 to 13 {
+        &-#{$var} {
+            width: (($var * 100) / 12) * 1%;
+        }
+    }
+}
+
+.h {
+    &-full {
+        height: 100%;
+    }
+}
