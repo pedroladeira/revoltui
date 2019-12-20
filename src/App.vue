@@ -19,7 +19,7 @@
                 <GridView />
 
 
-                <div class="m-3" id="flex">
+                <!-- <div class="m-3" id="flex">
                     <v-card title="Flex">
                         <div class="flex flex-wrap">
                             <div class="text-center px-2 py-2 m-2 bg-primary text-white">Side A</div>
@@ -180,7 +180,7 @@
                             </p>
                         </div>
                     </v-card>
-                </div>
+                </div> -->
             </div>
         </v-layout-admin>
     </div>

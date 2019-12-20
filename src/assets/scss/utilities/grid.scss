@@ -14,51 +14,67 @@
     }
 }
 
+
+/* RESPONSIVE GRID */
+$items: 12;
+$breakpoints: ('xs': 1px,
+    'sm': 1px,
+    'md': 1px,
+    'lg': 1px,
+    'xl': 1px);
+
+
+
 .row {
     display: flex;
-    flex-flow: row wrap;
-    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
-$breakpoints: ('xs', 'sm', 'md', 'lg', 'xl');
-$items: 12;
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    min-height: 1px;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @mixin break-xs() {
-    @media only screen and (max-width: 600px) {
+    @media (max-width: 575px) {
         @content;
     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @mixin break-sm() {
-    @media only screen and (min-width: 600px) {
+    @media (min-width: 576px) {
         @content;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @mixin break-md() {
-    @media only screen and (min-width: 768px) {
+    @media (min-width: 768px) {
         @content;
     }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @mixin break-lg() {
-    @media only screen and (min-width: 992px) {
+    @media (min-width: 992px) {
         @content;
     }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @mixin break-xl() {
-    @media only screen and (min-width: 1200px) {
+    @media (min-width: 1200px) {
         @content;
     }
 }
 
-[class*="col-"] {
+.row > [class^=col-] {
     width: 100%;
 }
 
@@ -66,27 +82,37 @@ $items: 12;
     @for $i from 1 through $items {
         &-xs-#{$i} {
             @include break-xs() {
-                width: #{$i / $items * 100%};
+                -webkit-box-flex: 0;
+                flex: 0 0 #{$i / $items * 100%};
+                max-width: #{$i / $items * 100%};
             }
         }
         &-sm-#{$i} {
             @include break-sm() {
-                width: #{$i / $items * 100%};
+                -webkit-box-flex: 0;
+                flex: 0 0 #{$i / $items * 100%};
+                max-width: #{$i / $items * 100%};
             }
         }
         &-md-#{$i} {
             @include break-md() {
-                width: #{$i / $items * 100%};
+                -webkit-box-flex: 0;
+                flex: 0 0 #{$i / $items * 100%};
+                max-width: #{$i / $items * 100%};
             }
         }
         &-lg-#{$i} {
             @include break-lg() {
-                width: #{$i / $items * 100%};
+                -webkit-box-flex: 0;
+                flex: 0 0 #{$i / $items * 100%};
+                max-width: #{$i / $items * 100%};
             }
         }
         &-xl-#{$i} {
             @include break-xl() {
-                width: #{$i / $items * 100%};
+                -webkit-box-flex: 0;
+                flex: 0 0 #{$i / $items * 100%};
+                max-width: #{$i / $items * 100%};
             }
         }
     }

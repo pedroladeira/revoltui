@@ -1,27 +1,12 @@
 <template>
     <div class="m-3" id="grid">
-        <v-card title="Grid Responsive">
+        <v-card title="Responsive Grid">
             <div class="row">
-                <div class="col-xs-12">
-                    <div class="text-center py-2 m-2 bg-primary text-white">xs/12</div>
+                <div class="col-sm-6 col-md-8 col-lg-3">
+                    <div class="py-3 m-3 text-center bg-primary text-white">col-sm-6 col-md-8 col-lg-3</div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6 col-sm-8">
-                    <div class="text-center py-2 m-2 bg-primary text-white">sm/6</div>
-                </div>
-                <div class="col-xs-6 col-sm-4">
-                    <div class="text-center py-2 m-2 bg-primary text-white">sm/6</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="text-center py-2 m-2 bg-primary text-white">lg/8</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-8 xs-hidden">
-                    <div class="text-center py-2 m-2 bg-primary text-white">lg/8</div>
+                <div class="col-sm-4">
+                    <div class="py-3 m-3 text-center bg-primary text-white">col-sm-4</div>
                 </div>
             </div>
 
