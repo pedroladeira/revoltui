@@ -13,3 +13,108 @@
         flex-wrap: nowrap;
     }
 }
+
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: 1rem;
+}
+
+$breakpoints: ('xs', 'sm', 'md', 'lg', 'xl');
+$items: 12;
+
+/* Extra small devices (phones, 600px and down) */
+@mixin break-xs() {
+    @media only screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@mixin break-sm() {
+    @media only screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@mixin break-md() {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@mixin break-lg() {
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@mixin break-xl() {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+[class*="col-"] {
+    width: 100%;
+}
+
+.col {
+    @for $i from 1 through $items {
+        &-xs-#{$i} {
+            @include break-xs() {
+                width: #{$i / $items * 100%};
+            }
+        }
+        &-sm-#{$i} {
+            @include break-sm() {
+                width: #{$i / $items * 100%};
+            }
+        }
+        &-md-#{$i} {
+            @include break-md() {
+                width: #{$i / $items * 100%};
+            }
+        }
+        &-lg-#{$i} {
+            @include break-lg() {
+                width: #{$i / $items * 100%};
+            }
+        }
+        &-xl-#{$i} {
+            @include break-xl() {
+                width: #{$i / $items * 100%};
+            }
+        }
+    }
+}
+
+
+@include break-xs() {
+    .xs-hidden {
+        display: none;
+    }
+}
+@include break-sm() {
+    .sm-hidden {
+        display: none;
+    }
+}
+@include break-md() {
+    .md-hidden {
+        display: none;
+    }
+}
+@include break-lg() {
+    .lg-hidden {
+        display: none;
+    }
+}
+@include break-xl() {
+    .xl-hidden {
+        display: none;
+    }
+}

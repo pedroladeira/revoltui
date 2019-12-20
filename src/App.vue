@@ -15,75 +15,31 @@
 
 
             <div class="p-2">
-                <div class="m-3" id="grid">
-                    <v-card title="Grid">
+
+                <GridView />
+
+
+                <div class="m-3" id="flex">
+                    <v-card title="Flex">
                         <div class="flex flex-wrap">
-                            <div class="w-12">
-                                <div class="text-center py-2 m-2 bg-primary text-white">12</div>
-                            </div>
-                            <div class="w-11">
-                                <div class="text-center py-2 m-2 bg-primary text-white">11</div>
-                            </div>
-                            <div class="w-1">
-                                <div class="text-center py-2 m-2 bg-primary text-white">1</div>
-                            </div>
-                            <div class="w-10">
-                                <div class="text-center py-2 m-2 bg-primary text-white">10</div>
-                            </div>
-                            <div class="w-2">
-                                <div class="text-center py-2 m-2 bg-primary text-white">2</div>
-                            </div>
-                            <div class="w-9">
-                                <div class="text-center py-2 m-2 bg-primary text-white">9</div>
-                            </div>
-                            <div class="w-3">
-                                <div class="text-center py-2 m-2 bg-primary text-white">3</div>
-                            </div>
-                            <div class="w-8">
-                                <div class="text-center py-2 m-2 bg-primary text-white">8</div>
-                            </div>
-                            <div class="w-4">
-                                <div class="text-center py-2 m-2 bg-primary text-white">4</div>
-                            </div>
-                            <div class="w-7">
-                                <div class="text-center py-2 m-2 bg-primary text-white">7</div>
-                            </div>
-                            <div class="w-5">
-                                <div class="text-center py-2 m-2 bg-primary text-white">5</div>
-                            </div>
-                            <div class="w-6">
-                                <div class="text-center py-2 m-2 bg-primary text-white">6</div>
-                            </div>
-                            <div class="w-6">
-                                <div class="text-center py-2 m-2 bg-primary text-white">6</div>
-                            </div>
-                            <div class="w-4">
-                                <div class="text-center py-2 m-2 bg-primary text-white">4</div>
-                            </div>
-                            <div class="w-4">
-                                <div class="text-center py-2 m-2 bg-primary text-white">4</div>
-                            </div>
-                            <div class="w-4">
-                                <div class="text-center py-2 m-2 bg-primary text-white">4</div>
-                            </div>
-                            <div class="w-3">
-                                <div class="text-center py-2 m-2 bg-primary text-white">3</div>
-                            </div>
-                            <div class="w-3">
-                                <div class="text-center py-2 m-2 bg-primary text-white">3</div>
-                            </div>
-                            <div class="w-3">
-                                <div class="text-center py-2 m-2 bg-primary text-white">3</div>
-                            </div>
-                            <div class="w-3">
-                                <div class="text-center py-2 m-2 bg-primary text-white">3</div>
-                            </div>
+                            <div class="text-center px-2 py-2 m-2 bg-primary text-white">Side A</div>
+                            <div class="flex-1 text-center py-2 m-2 bg-primary text-white">Side B (flex-1)</div>
                         </div>
 
                         <div slot="footer">
                             <p><strong>.flex</strong> display as flex</p>
                             <p><strong>.flex-wrap</strong> allows to wrap line</p>
-                            <p><strong>.w-##</strong> divided width by 12 columns</p>
+                            <p><strong>.flex-1</strong> flex grow</p>
+                        </div>
+                    </v-card>
+                </div>
+
+                <div class="m-3" id="sizes">
+                    <v-card title="Sizes">
+                        <div class="flex flex-wrap">
+                            <div v-for="(x,i) in 10" :key="i" :class="'w-'+x">
+                                <div class="text-center py-2 m-2 bg-primary text-white">{{ x }}</div>
+                            </div>
                         </div>
                     </v-card>
                 </div>
@@ -231,10 +187,12 @@
 </template>
 
 <script>
+import GridView from '@/views/components/Grid';
 
 export default {
     name: 'app',
     components: {
+        GridView
     }
 }
 </script>
