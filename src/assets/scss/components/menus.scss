@@ -1,0 +1,12 @@
+.v-menu-item {
+  padding: 0.5rem;
+  margin: 0.75rem 0;
+  vertical-align: middle;
+  transition: all 0.2s;
+  border-radius: var(--theme-border-radius);
+
+  &:hover {
+    background-color: #e0f3ff;
+    color: var(--theme-primary);
+  }
+}

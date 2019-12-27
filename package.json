@@ -1,42 +1,32 @@
 {
   "name": "vuepp",
   "version": "0.0.7",
-  "main": "./dist/vuepp.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build-lib": "vue-cli-service build --dest dist --target lib --name vuepp src/plugin.js --formats commonjs",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "build-lib": "vue-cli-service build --dest dist --target lib --name vuepp src/plugin.js --formats commonjs"
   },
+  "main": "./dist/vuepp.common.js",
   "dependencies": {
+    "highlight.js": "^9.17.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0",
-    "sass-loader": "^8.0.0",
-    "core-js": "^3.4.3",
     "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.1.0",
+    "@vue/cli-plugin-eslint": "^4.1.1",
     "@vue/cli-service": "^4.1.0",
+    "@vue/eslint-config-prettier": "^5.0.0",
     "babel-eslint": "^10.0.3",
+    "core-js": "^3.4.3",
     "eslint": "^5.16.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.13.0",
+    "prettier": "^1.19.1",
+    "sass-loader": "^8.0.0",
     "style-loader": "^1.0.1",
     "vue-template-compiler": "^2.6.10"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
   },
   "browserslist": [
     "> 1%",
