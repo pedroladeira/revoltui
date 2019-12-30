@@ -4,7 +4,9 @@
       <v-menu title="NavMenu">
         <v-menu-item>Homepage</v-menu-item>
         <v-menu-item>Item One</v-menu-item>
-        <v-menu-item to="https://www.google.com" target="_blank">Item Two</v-menu-item>
+        <v-menu-item to="https://www.google.com" target="_blank">
+          Item Two
+        </v-menu-item>
       </v-menu>
     </div>
     <template slot="code" type="html">
@@ -12,7 +14,6 @@
         {{ code }}
       </code>
     </template>
-
     <div class="footer">
       <p>
         <strong>(slot)</strong>
@@ -34,7 +35,7 @@ export default {
   data() {
     return {
       code: `
-<v-menu title="NavMenu">
+<v-menu title="Example">
   <v-menu-item>Homepage</v-menu-item>
   <v-menu-item>Item One</v-menu-item>
   <v-menu-item to="https://www.google.com" target="_blank">Item Two</v-menu-item>

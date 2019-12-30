@@ -7,37 +7,41 @@
     &__header {
         border-bottom: 1px solid rgba(26, 54, 126, 0.125);
     }
+    
+    &__footer {
+        border-top: 1px solid rgba(26, 54, 126, 0.125);
+    }
 
     // border-radius: var(--theme-border-radius);
     border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
 
 
-    &-primary>&__header {
+    &-primary {
         background-color: var(--global-bg-color-primary);
         color: var(--global-text-color-light);
     }
 
-    &-secundary>&__header {
+    &-secundary {
         background-color: var(--global-bg-color-secundary);
         color: var(--global-text-color-light);
     }
 
-    &-success>&__header {
+    &-success {
         background-color: var(--global-bg-color-success);
         color: var(--global-text-color-light);
     }
 
-    &-info>&__header {
+    &-info {
         background-color: var(--global-bg-color-info);
         color: var(--global-text-color-light);
     }
 
-    &-danger>&__header {
+    &-danger {
         background-color: var(--global-bg-color-danger);
         color: var(--global-text-color-light);
     }
 
-    &-warning>&__header {
+    &-warning {
         background-color: var(--global-bg-color-warning);
         color: var(--global-text-color-light);
     }
