@@ -3,9 +3,10 @@
   "version": "0.0.8",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "build-lib": "vue-cli-service build --dest dist --target lib --name vuepp src/plugin.js --formats commonjs"
+    "build:docs": "vue-cli-service build",
+    "build:lib": "vue-cli-service build --dest dist --target lib --name vuepp src/plugin.js --formats commonjs",
+    "build": "yarn build:lib && yarn build:docs"
   },
   "main": "./dist/vuepp.common.js",
   "dependencies": {
