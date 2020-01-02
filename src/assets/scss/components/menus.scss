@@ -9,23 +9,28 @@
       font-weight: bold;
     }
   }
+
+  &--horizontal .v-menu-item {
+    float: left;
+  }
+
+  .v-menu-item {
+    padding: 0.5rem;
+    margin: 0.75rem 0;
+    vertical-align: middle;
+    transition: all 0.2s;
+    border-radius: var(--theme-border-radius);
+    color: var(--global-text-color-dark);
+
+    &:hover, &:hover > a {
+      background-color: #e0f3ff;
+      color: var(--theme-primary);
+    }
+
+    & > a {
+      text-decoration: none;
+      color: var(--global-text-color-dark);
+    }
+  }
 }
 
-.v-menu-item {
-  padding: 0.5rem;
-  margin: 0.75rem 0;
-  vertical-align: middle;
-  transition: all 0.2s;
-  border-radius: var(--theme-border-radius);
-  color: var(--global-text-color-dark);
-  
-  &:hover, &:hover > a {
-    background-color: #e0f3ff;
-    color: var(--theme-primary);
-  }
-  
-  & > a {
-    text-decoration: none;
-    color: var(--global-text-color-dark);
-  }
-}

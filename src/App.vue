@@ -1,7 +1,15 @@
 <template>
   <div id="app">
     <v-layout-admin>
-      <v-navbar slot="header" title="Vue++"></v-navbar>
+      <v-navbar slot="header" title="Vue++">
+        <v-menu>
+          <v-menu-item>Homepage</v-menu-item>
+          <v-menu-item>Item One</v-menu-item>
+          <v-menu-item to="https://www.google.com" target="_blank">
+            Item Two
+          </v-menu-item>
+        </v-menu>
+      </v-navbar>
       <div slot="left">
         <v-menu title="Get Start">
           <v-menu-item link="/instalation">Instalation</v-menu-item>
@@ -25,6 +33,7 @@
         <CardsView />
         <MenusView />
         <NavbarView />
+        <IconsView />
       </div>
     </v-layout-admin>
   </div>
@@ -37,6 +46,7 @@ import BadgesView from "@/views/components/Badges";
 import CardsView from "@/views/components/Cards";
 import MenusView from "@/views/components/Menus";
 import NavbarView from "@/views/components/Navbar";
+import IconsView from "@/views/components/Icons";
 
 export default {
   name: "app",
@@ -46,7 +56,8 @@ export default {
     BadgesView,
     CardsView,
     MenusView,
-    NavbarView
+    NavbarView,
+    IconsView
   }
 };
 </script>

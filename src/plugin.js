@@ -5,6 +5,7 @@ import Card from "@/components/Card.vue";
 import Badge from "@/components/Badge.vue";
 import Menu from "@/components/Menu.vue";
 import MenuItem from "@/components/MenuItem.vue";
+import Icon from "@/components/Icon.vue";
 import "@/assets/scss/main.scss";
 
 export default {
@@ -16,5 +17,6 @@ export default {
     Vue.component(Badge.name, Badge);
     Vue.component(Menu.name, Menu);
     Vue.component(MenuItem.name, MenuItem);
+    Vue.component(Icon.name, Icon);
   }
 };

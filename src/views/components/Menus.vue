@@ -1,14 +1,27 @@
 <template>
   <DocContent title="Menus" id="menus">
-    <div slot="example" class="row mb-5">
-      <div class="col-sm-3">
-        <v-menu title="NavMenu">
-          <v-menu-item>Homepage</v-menu-item>
-          <v-menu-item>Item One</v-menu-item>
-          <v-menu-item to="https://www.google.com" target="_blank">
-            Item Two
-          </v-menu-item>
-        </v-menu>
+    <div slot="example" class="mb-5">
+      <div class="row">
+        <div class="col-sm-3">
+          <v-menu title="NavMenu">
+            <v-menu-item>Homepage</v-menu-item>
+            <v-menu-item>Item One</v-menu-item>
+            <v-menu-item to="https://www.google.com" target="_blank">
+              Item Two
+            </v-menu-item>
+          </v-menu>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-sm-12">
+          <v-menu title="Horizontal Menu" view="horizontal">
+            <v-menu-item>Homepage</v-menu-item>
+            <v-menu-item>Item One</v-menu-item>
+            <v-menu-item to="https://www.google.com" target="_blank">
+              Item Two
+            </v-menu-item>
+          </v-menu>
+        </div>
       </div>
     </div>
     <template slot="code" type="html">
@@ -22,6 +35,9 @@
       </p>
       <p class="text-sm">
         string
+      </p>
+      <p>
+        <strong>:view</strong> can be <i>horizontal</i>
       </p>
     </div>
   </DocContent>
