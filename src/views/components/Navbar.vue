@@ -1,15 +1,15 @@
 <template>
   <DocContent title="Menus" id="menus">
-    <div slot="example" class="row mb-5">
-      <div class="col-sm-3">
-        <v-menu title="NavMenu">
+    <div slot="example" class="mb-5">
+      <v-navbar class="mb-3" title="Example" link="#">
+        <v-menu view="horizontal">
           <v-menu-item>Homepage</v-menu-item>
           <v-menu-item>Item One</v-menu-item>
           <v-menu-item to="https://www.google.com" target="_blank">
             Item Two
           </v-menu-item>
         </v-menu>
-      </div>
+      </v-navbar>
     </div>
     <template slot="code" type="html">
       <code class="html">

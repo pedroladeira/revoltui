@@ -1,0 +1,15 @@
+.v-navbar {
+    box-shadow: var(--navbar-box-shadow);
+    height: var(--navbar-height);
+    background-color: var(--navbar-bg-color);
+    
+    &__title {
+        width: var(--navbar-title-width);
+        height: var(--navbar-height);
+        line-height: var(--navbar-height);
+        h1 {
+            margin: 0;
+            margin-left: 10px;
+        }
+    }
+}

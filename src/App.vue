@@ -24,6 +24,7 @@
         <BadgesView />
         <CardsView />
         <MenusView />
+        <NavbarView />
       </div>
     </v-layout-admin>
   </div>
@@ -35,6 +36,7 @@ import ButtonsView from "@/views/components/Buttons";
 import BadgesView from "@/views/components/Badges";
 import CardsView from "@/views/components/Cards";
 import MenusView from "@/views/components/Menus";
+import NavbarView from "@/views/components/Navbar";
 
 export default {
   name: "app",
@@ -43,7 +45,8 @@ export default {
     ButtonsView,
     BadgesView,
     CardsView,
-    MenusView
+    MenusView,
+    NavbarView
   }
 };
 </script>

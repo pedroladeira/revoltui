@@ -1,11 +1,18 @@
 <template>
   <nav class="v-navbar">
-    <div class="v-navbar__title">
-      <div class="flex">
-        <div v-if="title">{{ title }}</div>
-        <slot name="header"></slot>
-        <div class="flex-1"></div>
+    <div class="flex">
+      <div
+        v-if="title"
+        :class="{
+          'cursor-pointer': link
+        }"
+        class="v-navbar__title"
+        @click="onClickTitle"
+      >
+        <h1>{{ title }}</h1>
       </div>
+      <slot></slot>
+      <div class="flex-1"></div>
     </div>
   </nav>
 </template>
@@ -13,20 +20,13 @@
 <script>
 export default {
   name: "v-navbar",
-  props: ["title"]
+  props: ["title", "link"],
+  methods: {
+    onClickTitle() {
+      if (this.link) {
+        window.location.href = this.link;
+      }
+    }
+  }
 };
 </script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss" scoped>
-.v-navbar {
-  box-shadow: var(--navbar-box-shadow);
-  height: var(--navbar-height);
-  background-color: var(--navbar-bg-color);
-
-  &__title {
-    width: var(--navbar-title-width);
-    height: 100%;
-  }
-}
-</style>
