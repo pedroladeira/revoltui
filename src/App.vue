@@ -12,6 +12,7 @@
       </v-navbar>
       <div slot="left">
         <v-menu title="Get Start">
+          <v-menu-item to="/">Introduction</v-menu-item>
           <v-menu-item to="/instalation">Instalation</v-menu-item>
         </v-menu>
         <v-menu title="Components">

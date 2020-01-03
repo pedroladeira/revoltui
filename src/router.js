@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import IntroView from "@/views/components/Intro";
+import InstalationView from "@/views/components/Instalation";
 import GridView from "@/views/components/Grid";
 import ButtonsView from "@/views/components/Buttons";
 import BadgesView from "@/views/components/Badges";
@@ -15,6 +16,10 @@ const routes = [
   {
     path: "/",
     component: IntroView
+  },
+  {
+    path: "/instalation",
+    component: InstalationView
   },
   {
     path: "/grid",
@@ -44,7 +49,7 @@ const routes = [
     path: "/icons",
     component: IconsView
   }
-]
+];
 
 export default new VueRouter({
   routes // short for `routes: routes`
