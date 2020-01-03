@@ -1,22 +1,22 @@
-# Vue++
+# RevoltUI
 
-## Add vue++ to your project
+## Add RevoltUI to your project
 
 with npm
 ```
-npm add vuepp
+npm add vue-revoltui
 ```
 
 with yarn
 ```
-yarn add vuepp
+yarn add vue-revoltui
 ```
 
-### Include vue++ in your project
+### Include RevoltUI in your project
 
 ```javascript
 import Vue from 'vue';
-import Vuepp from 'vuepp';
+import RevoltUI from 'vue-revoltui';
 
-Vue.use(Vuepp);
+Vue.use(RevoltUI);
 ```
