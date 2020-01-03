@@ -12,7 +12,10 @@
         <h1>{{ title }}</h1>
       </div>
       <slot></slot>
-      <div class="flex-1"></div>
+      <div class="flex flex-1">
+        <div class="flex-1"></div>
+        <slot name="right"></slot>
+      </div>
     </div>
   </nav>
 </template>

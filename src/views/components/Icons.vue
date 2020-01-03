@@ -1,7 +1,7 @@
 <template>
-  <DocContent title="Menus" id="menus">
+  <DocContent title="Icons" id="icons">
     <div slot="example" class="mb-5">
-      <v-icon>far fa-arrow-alt-circle-up</v-icon>
+      <v-icon color="primary">far fa-arrow-alt-circle-up</v-icon>
     </div>
     <template slot="code" type="html">
       <code class="html">

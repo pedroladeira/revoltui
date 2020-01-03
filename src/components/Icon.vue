@@ -7,7 +7,7 @@
 <script>
 export default {
   name: "v-icon",
-  props: ["color"],
+  props: ["color", "border"],
   computed: {
     getColorClass() {
       if (
@@ -20,12 +20,12 @@ export default {
           "warning"
         ].indexOf(this.color) > -1
       ) {
-        return "v-icon-" + this.color;
+        return "v-icon--" + this.color;
       }
       return "";
     },
     getBordered() {
-      return 'v-icon-circle';
+      return this.border ? 'v-icon--border' : '';
     },
     getIconName() {
       if (this.$slots.default) {

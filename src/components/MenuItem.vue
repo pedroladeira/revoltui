@@ -13,6 +13,19 @@
 <script>
 export default {
   name: "v-menu-item",
-  props: ["to", "target"]
+  props: ["to", "target"],
+  methods: {
+    onClick() {
+      if (this.to) {
+        if (!this.target && this.$router) {
+          this.$router.push(this.to);
+        } else {
+          //TODO fix
+          window.location.href = this.to;
+        }
+        this.$emit("click", this.to);
+      }
+    }
+  }
 };
 </script>

@@ -1,10 +1,27 @@
 .v-icon {
 
-  &-circle {
-    border-radius: 100px;
-    width: 10px;
-    height: 10px;
-    padding: 2px;
-    border: 1px solid red;
+  &--primary {
+    color: var(--global-bg-color-primary);
   }
+
+  &--secondary {
+    color: var(--global-bg-color-secondary);
+  }
+
+  &--success {
+    color: var(--global-bg-color-success);
+  }
+
+  &--info {
+    color: var(--global-bg-color-info);
+  }
+
+  &--danger {
+    color: var(--global-bg-color-danger);
+  }
+
+  &--warning {
+    color: var(--global-bg-color-warning);
+  }
+
 }
