@@ -1,14 +1,14 @@
 {
-  "name": "vuepp",
-  "version": "0.0.8",
+  "name": "vue-revoltui",
+  "version": "0.0.9",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
     "build:docs": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --dest dist --target lib --name vuepp src/plugin.js --formats commonjs",
+    "build:lib": "vue-cli-service build --dest dist --target lib --name revoltui src/plugin.js --formats commonjs",
     "build": "yarn build:lib && yarn build:docs"
   },
-  "main": "./dist/vuepp.common.js",
+  "main": "./dist/revoltui.common.js",
   "dependencies": {
     "highlight.js": "^9.17.1",
     "vue": "^2.6.10",

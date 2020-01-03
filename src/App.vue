@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-layout-admin>
-      <v-navbar slot="header" title="Vue++">
+      <v-navbar slot="header" title="RevoltUI">
         <v-menu slot="right">
           <v-menu-item>Homepage</v-menu-item>
           <v-menu-item>Item One</v-menu-item>
