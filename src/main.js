@@ -5,6 +5,9 @@ import Plugin from "./plugin.js";
 import "@/assets/scss/main.scss";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all.js";
+import TablePropsItem from "@/views/partials/TablePropsItem";
+
+Vue.component("TablePropsItem", TablePropsItem);
 
 Vue.use(Plugin);
 

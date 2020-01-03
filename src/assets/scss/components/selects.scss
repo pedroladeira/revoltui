@@ -1,0 +1,44 @@
+$selects__item-size: 35px;
+$selects__max-items: 4;
+$selects__min-width: 200px;
+
+.v-select {
+  position: relative;
+  border: 1px solid red;
+  width: fit-content;
+  min-width: $selects__min-width;
+  padding-left: 15px;
+  padding-right: 15px;
+  // overflow: hidden;
+  height: $selects__item-size;
+  
+  &__selection {
+    height: $selects__item-size;
+    line-height: $selects__item-size;
+  }
+  
+  &__options {
+    display: none;
+    position: absolute;
+    top: $selects__item-size;
+    left: 0;
+    right: 0;
+    max-height: $selects__item-size * $selects__max-items;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  &--open > &__options {
+    display: block;
+  }
+
+  &-item {
+    height: $selects__item-size;
+    line-height: $selects__item-size;
+
+    &:hover {
+      background-color: red;
+    }
+  }
+}

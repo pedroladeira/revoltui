@@ -6,6 +6,10 @@ import Badge from "@/components/Badge.vue";
 import Menu from "@/components/Menu.vue";
 import MenuItem from "@/components/MenuItem.vue";
 import Icon from "@/components/Icon.vue";
+import Select from "@/components/Select.vue";
+import SelectItem from "@/components/SelectItem.vue";
+import Input from "@/components/Input.vue";
+import Table from "@/components/Table.vue";
 import "@/assets/scss/main.scss";
 
 export default {
@@ -18,5 +22,9 @@ export default {
     Vue.component(Menu.name, Menu);
     Vue.component(MenuItem.name, MenuItem);
     Vue.component(Icon.name, Icon);
+    Vue.component(Select.name, Select);
+    Vue.component(SelectItem.name, SelectItem);
+    Vue.component(Input.name, Input);
+    Vue.component(Table.name, Table);
   }
 };

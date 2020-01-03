@@ -1,0 +1,32 @@
+$table__cell-space: .55rem;
+
+.v-table {
+  width: 100%;
+  border-spacing: 0;
+
+  tr {
+    td, th {
+      padding: $table__cell-space;
+    }
+    td {
+      border-bottom: 1px solid #dcdbdb;
+    }
+    &:first-child {
+      th {
+        border-top: 1px solid #dcdbdb;
+      }
+      td {
+        border-top: 2px solid #dcdbdb;
+      }
+    }
+  }
+
+  &--bordered tr {
+    th, td {
+      border-right: 1px solid #dcdbdb;
+      &:first-child {
+        border-left: 1px solid #dcdbdb;
+      }
+    }
+  }
+}

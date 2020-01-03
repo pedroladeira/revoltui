@@ -7,7 +7,16 @@
             <slot name="code"></slot>
         </pre>
       </div>
-      <slot></slot>
+      <div v-if="this.$slots['doc-props']" class="mb-2">
+        <h3>Props</h3>
+        <v-table :heads="propsHeaders" :bordered="true">
+          <slot name="doc-props"></slot>
+        </v-table>
+      </div>
+      <div v-if="this.$slots['doc-events']" class="mb-2">
+        <h3>Events</h3>
+        <slot name="doc-events"></slot>
+      </div>
     </v-card>
   </div>
 </template>
@@ -18,6 +27,11 @@ import "highlight.js/styles/github.css";
 
 export default {
   props: ["title", "id"],
+  data() {
+    return {
+      propsHeaders: ["Name", "Type", "Default", "Mandatory", "Description"]
+    };
+  },
   mounted() {
     // set highlight block
     hljs.highlightBlock(this.$refs.code);

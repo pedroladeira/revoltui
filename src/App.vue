@@ -21,6 +21,7 @@
           <v-menu-item to="/badges">Badges</v-menu-item>
           <v-menu-item to="/cards">Cards</v-menu-item>
           <v-menu-item to="/menus">Menus</v-menu-item>
+          <v-menu-item to="/forms">Forms</v-menu-item>
         </v-menu>
         <v-menu title="Others">
           <v-menu-item to="#grid">Help</v-menu-item>

@@ -3,6 +3,10 @@
         text-align: center;
     } 
     
+    &-left {
+        text-align: left;
+    } 
+    
     @each $var, $val in $colors {
         &-#{$var} {
             color: $val;

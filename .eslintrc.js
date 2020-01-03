@@ -10,10 +10,10 @@ module.exports = {
     ],
     "rules": {
         "comma-dangle": 0,
-        "no-console": 2
+        "no-console": "off"
     },
     "parserOptions": {
         "parser": "babel-eslint",
-        "no-console": 2
+        "no-console": "off"
     }
 }

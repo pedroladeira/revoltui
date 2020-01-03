@@ -9,6 +9,7 @@ import CardsView from "@/views/components/Cards";
 import MenusView from "@/views/components/Menus";
 import NavbarView from "@/views/components/Navbar";
 import IconsView from "@/views/components/Icons";
+import FormsView from "@/views/components/Forms";
 
 Vue.use(VueRouter);
 
@@ -48,6 +49,10 @@ const routes = [
   {
     path: "/icons",
     component: IconsView
+  },
+  {
+    path: "/Forms",
+    component: FormsView
   }
 ];
 
