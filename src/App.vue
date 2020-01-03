@@ -6,7 +6,7 @@
           <v-menu-item>Homepage</v-menu-item>
           <v-menu-item>Item One</v-menu-item>
           <v-menu-item to="https://www.google.com" target="_blank">
-            Item Two
+            v{{ cfgPackage.version }}
           </v-menu-item>
         </v-menu>
       </v-navbar>
@@ -36,8 +36,15 @@
 </template>
 
 <script>
+const cfgPackage = require("../package.json");
+
 export default {
-  name: "app"
+  name: "app",
+  data() {
+    return {
+      cfgPackage
+    };
+  }
 };
 </script>
 
