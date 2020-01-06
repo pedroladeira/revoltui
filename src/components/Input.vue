@@ -1,5 +1,16 @@
 <template>
+  <select
+    v-if="getType === 'select'"
+    :placeholder="placeholder"
+    class="v-input"
+    :class="[getColorClass]"
+    :value="currentValue"
+    @input="onInput"
+  >
+    <slot></slot>
+  </select>
   <input
+    v-else
     :type="getType"
     :placeholder="placeholder"
     class="v-input"
@@ -30,7 +41,7 @@ export default {
       return "";
     },
     getType() {
-      return "text";
+      return this.type ? this.type : "text";
     }
   },
   data() {

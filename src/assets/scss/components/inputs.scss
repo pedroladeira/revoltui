@@ -9,4 +9,11 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
+
+  &:focus {
+    border-color: #a9bcee;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+  }
 }

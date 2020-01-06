@@ -7,15 +7,17 @@
             <slot name="code"></slot>
         </pre>
       </div>
-      <div v-if="this.$slots['doc-props']" class="mb-2">
+      <div v-if="this.$slots['doc-props']" class="mb-3">
         <h3>Props</h3>
         <v-table :heads="propsHeaders" :bordered="true">
           <slot name="doc-props"></slot>
         </v-table>
       </div>
-      <div v-if="this.$slots['doc-events']" class="mb-2">
+      <div v-if="this.$slots['doc-events']" class="mb-3">
         <h3>Events</h3>
-        <slot name="doc-events"></slot>
+        <v-table :heads="propsHeaders" :bordered="true">
+          <slot name="doc-events"></slot>
+        </v-table>
       </div>
     </v-card>
   </div>
