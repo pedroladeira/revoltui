@@ -10,6 +10,7 @@ import Select from "@/components/Select.vue";
 import SelectItem from "@/components/SelectItem.vue";
 import Input from "@/components/Input.vue";
 import Table from "@/components/Table.vue";
+import Header from "@/components/Header.vue";
 import "@/assets/scss/main.scss";
 
 export default {
@@ -26,5 +27,6 @@ export default {
     Vue.component(SelectItem.name, SelectItem);
     Vue.component(Input.name, Input);
     Vue.component(Table.name, Table);
+    Vue.component(Header.name, Header);
   }
 };

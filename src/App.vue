@@ -2,6 +2,9 @@
   <div id="app">
     <v-layout-admin>
       <v-navbar slot="header" title="RevoltUI">
+        <v-menu>
+          <v-menu-item>Alfa Version</v-menu-item>
+        </v-menu>
         <v-menu slot="right">
           <v-menu-item>Homepage</v-menu-item>
           <v-menu-item>Item One</v-menu-item>
