@@ -20,13 +20,13 @@
           {{ code }}
         </code>
       </template>
-      <TablePropsItem slot="doc-props">
+      <TablePropsDocsItem slot="doc-props">
         <template slot="name">placeholder</template>
         <template slot="type">string</template>
         <template slot="default"></template>
         <template slot="mandatory"></template>
         <template slot="description"></template>
-      </TablePropsItem>
+      </TablePropsDocsItem>
     </DocContent>
     <DocContent title="Input fields" id="input-fields">
       <div slot="example" class="row">
@@ -50,21 +50,21 @@
           {{ codeInput }}
         </code>
       </template>
-      <TablePropsItem slot="doc-props">
+      <TablePropsDocsItem slot="doc-props">
         <template slot="name">placeholder</template>
         <template slot="type">string</template>
         <template slot="default"></template>
         <template slot="mandatory"></template>
         <template slot="description"></template>
-      </TablePropsItem>
-      <TablePropsItem slot="doc-props">
+      </TablePropsDocsItem>
+      <TablePropsDocsItem slot="doc-props">
         <template slot="name">value</template>
         <template slot="type">string</template>
         <template slot="default"></template>
         <template slot="mandatory"></template>
         <template slot="description"></template>
-      </TablePropsItem>
-      <TablePropsItem slot="doc-props">
+      </TablePropsDocsItem>
+      <TablePropsDocsItem slot="doc-props">
         <template slot="name">type</template>
         <template slot="type">string</template>
         <template slot="default">text</template>
@@ -72,14 +72,14 @@
         <template slot="description">
           Options: text, select, number, date, textarea
         </template>
-      </TablePropsItem>
-      <TablePropsItem slot="doc-events">
+      </TablePropsDocsItem>
+      <TablePropsDocsItem slot="doc-events">
         <template slot="name">@input</template>
         <template slot="type">string</template>
         <template slot="default"></template>
         <template slot="mandatory"></template>
         <template slot="description"></template>
-      </TablePropsItem>
+      </TablePropsDocsItem>
     </DocContent>
   </div>
 </template>

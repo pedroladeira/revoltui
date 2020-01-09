@@ -2,20 +2,20 @@
   <div class="doc-content m-3" :id="id">
     <v-card :title="title">
       <slot name="example"></slot>
-      <div ref="code" class="code px-3">
+      <div ref="code" class="code px-3 mb-3">
         <pre>
             <slot name="code"></slot>
         </pre>
       </div>
       <div v-if="this.$slots['doc-props']" class="mb-3">
         <h3>Props</h3>
-        <v-table :heads="propsHeaders" :bordered="true">
+        <v-table :heads="propsHeadersDocs" :bordered="true">
           <slot name="doc-props"></slot>
         </v-table>
       </div>
       <div v-if="this.$slots['doc-events']" class="mb-3">
         <h3>Events</h3>
-        <v-table :heads="propsHeaders" :bordered="true">
+        <v-table :heads="propsHeadersEvents" :bordered="true">
           <slot name="doc-events"></slot>
         </v-table>
       </div>
@@ -31,7 +31,8 @@ export default {
   props: ["title", "id"],
   data() {
     return {
-      propsHeaders: ["Name", "Type", "Default", "Mandatory", "Description"]
+      propsHeadersDocs: ["Name", "Type", "Default", "Mandatory", "Description"],
+      propsHeadersEvents: ["Name", "Parameters", "Description"]
     };
   },
   mounted() {

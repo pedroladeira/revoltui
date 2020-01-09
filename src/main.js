@@ -5,9 +5,11 @@ import Plugin from "./plugin.js";
 import "@/../scss/main.scss";
 import "@fortawesome/fontawesome-free/css/all.css";
 import "@fortawesome/fontawesome-free/js/all.js";
-import TablePropsItem from "@/views/pages/partials/TablePropsItem";
+import TablePropsDocsItem from "@/views/pages/partials/TablePropsDocsItem";
+import TablePropsEventsItem from "@/views/pages/partials/TablePropsEventsItem";
 
-Vue.component("TablePropsItem", TablePropsItem);
+Vue.component("TablePropsDocsItem", TablePropsDocsItem);
+Vue.component("TablePropsEventsItem", TablePropsEventsItem);
 
 Vue.use(Plugin);
 

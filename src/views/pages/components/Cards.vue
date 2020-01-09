@@ -1,64 +1,68 @@
 <template>
-  <DocContent title="Cards" id="cards">
-    <div slot="example" class="row mb-5">
-      <div class="col-md-3 p-2">
-        <v-card title="Default">
-          The conntent
-          <div slot="footer">The footer</div>
-        </v-card>
-      </div>
-      <div class="col-md-3 p-2">
-        <v-card color="primary" title="Primary">
-          The conntent
-          <div slot="footer">The footer</div>
-        </v-card>
-      </div>
-      <div class="col-md-3 p-2">
-        <v-card color="secondary" title="secondary">
-          The conntent
-          <div slot="footer">The footer</div>
-        </v-card>
-      </div>
-      <div class="col-md-3 p-2">
-        <v-card color="success" title="Success">
-          The conntent
-          <div slot="footer">The footer</div>
-        </v-card>
-      </div>
-      <div class="col-md-3 p-2">
-        <v-card color="info" title="Info">
-          The conntent
-          <div slot="footer">The footer</div>
-        </v-card>
-      </div>
-      <div class="col-md-3 p-2">
-        <v-card color="danger" title="Danger">
-          The conntent
-          <div slot="footer">The footer</div>
-        </v-card>
-      </div>
-      <div class="col-md-3 p-2">
-        <v-card color="warning" title="Warning">
-          The conntent
-          <div slot="footer">The footer</div>
-        </v-card>
-      </div>
+  <div>
+    <div class="m-3">
+      <v-header>Cards</v-header>
     </div>
-    <template slot="code" type="html">
-      <code class="html">
-        {{ code }}
-      </code>
-    </template>
+    <DocContent title="Cards" id="cards">
+      <div slot="example" class="row mb-5">
+        <div class="col-md-3 p-2">
+          <v-card title="Default">
+            The conntent
+            <div slot="footer">The footer</div>
+          </v-card>
+        </div>
+        <div class="col-md-3 p-2">
+          <v-card color="primary" title="Primary">
+            The conntent
+            <div slot="footer">The footer</div>
+          </v-card>
+        </div>
+        <div class="col-md-3 p-2">
+          <v-card color="secondary" title="secondary">
+            The conntent
+            <div slot="footer">The footer</div>
+          </v-card>
+        </div>
+        <div class="col-md-3 p-2">
+          <v-card color="success" title="Success">
+            The conntent
+            <div slot="footer">The footer</div>
+          </v-card>
+        </div>
+        <div class="col-md-3 p-2">
+          <v-card color="info" title="Info">
+            The conntent
+            <div slot="footer">The footer</div>
+          </v-card>
+        </div>
+        <div class="col-md-3 p-2">
+          <v-card color="danger" title="Danger">
+            The conntent
+            <div slot="footer">The footer</div>
+          </v-card>
+        </div>
+        <div class="col-md-3 p-2">
+          <v-card color="warning" title="Warning">
+            The conntent
+            <div slot="footer">The footer</div>
+          </v-card>
+        </div>
+      </div>
+      <template slot="code" type="html">
+        <code class="html">
+          {{ code }}
+        </code>
+      </template>
 
-    <div class="footer">
-      <p>
-        <strong>:color</strong>
-      </p>
-      <p class="text-sm">
-        default, primary, secondary, success, info, danger, warning
-      </p>
-    </div>
-  </DocContent>
+      <TablePropsDocsItem slot="doc-props">
+        <template slot="name">color</template>
+        <template slot="type">string</template>
+        <template slot="default">default</template>
+        <template slot="mandatory"></template>
+        <template slot="description">You can use the styles bellow: <br/><b>(default, primary, secondary, success, info, danger, warning)</b></template>
+      </TablePropsDocsItem>
+    </DocContent>
+  </div>
 </template>
 
 <script>

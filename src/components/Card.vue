@@ -22,7 +22,7 @@ export default {
       if (
         [
           "primary",
-          "secundary",
+          "secondary",
           "info",
           "success",
           "danger",

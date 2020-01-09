@@ -1,5 +1,5 @@
 <template>
-  <span class="v-badge uppercase" :class="[getColorClass]">
+  <span class="v-badge" :class="[getColorClass]">
     <slot></slot>
   </span>
 </template>
