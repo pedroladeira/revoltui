@@ -1,15 +1,15 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import IntroView from "@/views/components/Intro";
-import InstalationView from "@/views/components/Instalation";
-import GridView from "@/views/components/Grid";
-import ButtonsView from "@/views/components/Buttons";
-import BadgesView from "@/views/components/Badges";
-import CardsView from "@/views/components/Cards";
-import MenusView from "@/views/components/Menus";
-import NavbarView from "@/views/components/Navbar";
-import IconsView from "@/views/components/Icons";
-import FormsView from "@/views/components/Forms";
+import InstalationView from "@/views/pages/components/Instalation";
+import GridView from "@/views/pages/components/Grid";
+import ButtonsView from "@/views/pages/components/Buttons";
+import BadgesView from "@/views/pages/components/Badges";
+import CardsView from "@/views/pages/components/Cards";
+import MenusView from "@/views/pages/components/Menus";
+import NavbarView from "@/views/pages/components/Navbar";
+import IconsView from "@/views/pages/components/Icons";
+import FormsView from "@/views/pages/components/Forms";
+import IntroView from "@/views/pages/Intro";
 
 Vue.use(VueRouter);
 
