@@ -11,7 +11,6 @@ import SelectItem from "@/components/SelectItem.vue";
 import Input from "@/components/Input.vue";
 import Table from "@/components/Table.vue";
 import Header from "@/components/Header.vue";
-import "@/assets/scss/main.scss";
 
 export default {
   install(Vue) {

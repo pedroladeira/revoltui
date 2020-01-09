@@ -1,12 +1,12 @@
 .text {
     &-center {
         text-align: center;
-    } 
-    
+    }
+
     &-left {
         text-align: left;
-    } 
-    
+    }
+
     @each $var, $val in $colors {
         &-#{$var} {
             color: $val;
@@ -19,6 +19,8 @@
         -ms-user-select: none;
         user-select: none;
     }
+}
 
-    
-} 
+.uppercase {
+    text-transform: uppercase;
+}
