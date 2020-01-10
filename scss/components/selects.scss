@@ -8,15 +8,16 @@ $selects__min-width: 200px;
   background-color: var(--global-bg-color-default);
   border-radius: var(--layout-radius);
   width: 100%;
-  padding: .375rem .75rem;
+  padding: 0 .75rem;
+  height: calc(2.25rem + 2px);
   border: 1px solid #ced4da;
   min-width: $selects__min-width;
-  
+
   &__selection {
-    height: $selects__item-size;
-    line-height: $selects__item-size;
+    height: calc(2.25rem + 2px);
+    line-height: calc(2.25rem + 2px);
   }
-  
+
   &__options {
     display: none;
     position: absolute;

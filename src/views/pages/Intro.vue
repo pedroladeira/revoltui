@@ -45,6 +45,11 @@ export default {
           exist: true
         },
         {
+          title: "Menu",
+          status: "completed",
+          exist: true
+        },
+        {
           title: "Forms",
           status: "",
           exist: true
