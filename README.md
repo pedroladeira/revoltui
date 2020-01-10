@@ -4,19 +4,19 @@
 
 with npm
 ```
-npm add vue-revoltui
+npm add revoltui
 ```
 
 with yarn
 ```
-yarn add vue-revoltui
+yarn add revoltui
 ```
 
 ### Include RevoltUI in your project
 
 ```javascript
 import Vue from 'vue';
-import RevoltUI from 'vue-revoltui';
+import RevoltUI from 'revoltui';
 
 Vue.use(RevoltUI);
 ```
