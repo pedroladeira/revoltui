@@ -1018,13 +1018,6 @@ module.exports = function (input, PREFERRED_STRING) {
 
 /***/ }),
 
-/***/ "c1c3":
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin
-
-/***/ }),
-
 /***/ "c430":
 /***/ (function(module, exports) {
 
@@ -1421,18 +1414,19 @@ if (typeof window !== 'undefined') {
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
 var es_function_name = __webpack_require__("b0c0");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"29848055-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button.vue?vue&type=template&id=0b688f14&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"v-button py-1 px-2",class:[_vm.getColorClass, _vm.getShadowClass]},[_vm._t("default")],2)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"29848055-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button.vue?vue&type=template&id=e0d847ae&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"v-button py-1 px-2",class:[_vm.getColorClass, _vm.getShadowClass],on:{"click":_vm.onClick}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Button.vue?vue&type=template&id=0b688f14&
+// CONCATENATED MODULE: ./src/components/Button.vue?vue&type=template&id=e0d847ae&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.index-of.js
 var es_array_index_of = __webpack_require__("c975");
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Button.vue?vue&type=script&lang=js&
 
+//
 //
 //
 //
@@ -1456,6 +1450,11 @@ var es_array_index_of = __webpack_require__("c975");
       }
 
       return "";
+    }
+  },
+  methods: {
+    onClick: function onClick() {
+      this.$emit('click');
     }
   }
 });
@@ -1722,12 +1721,12 @@ var Navbar_component = normalizeComponent(
 )
 
 /* harmony default export */ var Navbar = (Navbar_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"29848055-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Card.vue?vue&type=template&id=e72361ee&
-var Cardvue_type_template_id_e72361ee_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-card",class:[_vm.getColorClass]},[(_vm.hasHeaderSlot || _vm.title)?_c('div',{staticClass:"v-card__header"},[(!_vm.hasHeaderSlot)?_c('span',{staticClass:"text-xl"},[_vm._v(_vm._s(_vm.title))]):_vm._e(),_vm._t("header")],2):_vm._e(),(_vm.hasContentSlot)?_c('div',{staticClass:"v-card__content"},[_vm._t("default")],2):_vm._e(),(_vm.hasFooterSlot)?_c('div',{staticClass:"v-card__footer"},[_vm._t("footer")],2):_vm._e()])}
-var Cardvue_type_template_id_e72361ee_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"29848055-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Card.vue?vue&type=template&id=2e8bdccf&
+var Cardvue_type_template_id_2e8bdccf_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-card",class:[_vm.getColorClass]},[(_vm.hasHeaderSlot || _vm.title)?_c('div',{staticClass:"v-card__header"},[(!_vm.hasHeaderSlot)?_c('span',{staticClass:"text-xl"},[_vm._v(_vm._s(_vm.title))]):_vm._e(),_vm._t("header")],2):_vm._e(),(_vm.hasContentSlot)?_c('div',{staticClass:"v-card__content"},[_vm._t("default")],2):_vm._e(),(_vm.hasFooterSlot)?_c('div',{staticClass:"v-card__footer"},[_vm._t("footer")],2):_vm._e()])}
+var Cardvue_type_template_id_2e8bdccf_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Card.vue?vue&type=template&id=e72361ee&
+// CONCATENATED MODULE: ./src/components/Card.vue?vue&type=template&id=2e8bdccf&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Card.vue?vue&type=script&lang=js&
 
@@ -1751,7 +1750,7 @@ var Cardvue_type_template_id_e72361ee_staticRenderFns = []
   props: ["title", "color"],
   computed: {
     getColorClass: function getColorClass() {
-      if (["primary", "secundary", "info", "success", "danger", "warning"].indexOf(this.color) > -1) {
+      if (["primary", "secondary", "info", "success", "danger", "warning"].indexOf(this.color) > -1) {
         return "v-card-" + this.color;
       }
 
@@ -1780,8 +1779,8 @@ var Cardvue_type_template_id_e72361ee_staticRenderFns = []
 
 var Card_component = normalizeComponent(
   components_Cardvue_type_script_lang_js_,
-  Cardvue_type_template_id_e72361ee_render,
-  Cardvue_type_template_id_e72361ee_staticRenderFns,
+  Cardvue_type_template_id_2e8bdccf_render,
+  Cardvue_type_template_id_2e8bdccf_staticRenderFns,
   false,
   null,
   null,
@@ -1790,12 +1789,12 @@ var Card_component = normalizeComponent(
 )
 
 /* harmony default export */ var Card = (Card_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"29848055-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Badge.vue?vue&type=template&id=0fb63a45&
-var Badgevue_type_template_id_0fb63a45_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{staticClass:"v-badge uppercase",class:[_vm.getColorClass]},[_vm._t("default")],2)}
-var Badgevue_type_template_id_0fb63a45_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"29848055-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Badge.vue?vue&type=template&id=f8443b92&
+var Badgevue_type_template_id_f8443b92_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('span',{staticClass:"v-badge",class:[_vm.getColorClass]},[_vm._t("default")],2)}
+var Badgevue_type_template_id_f8443b92_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Badge.vue?vue&type=template&id=0fb63a45&
+// CONCATENATED MODULE: ./src/components/Badge.vue?vue&type=template&id=f8443b92&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Badge.vue?vue&type=script&lang=js&
 
@@ -1830,8 +1829,8 @@ var Badgevue_type_template_id_0fb63a45_staticRenderFns = []
 
 var Badge_component = normalizeComponent(
   components_Badgevue_type_script_lang_js_,
-  Badgevue_type_template_id_0fb63a45_render,
-  Badgevue_type_template_id_0fb63a45_staticRenderFns,
+  Badgevue_type_template_id_f8443b92_render,
+  Badgevue_type_template_id_f8443b92_staticRenderFns,
   false,
   null,
   null,
@@ -2353,11 +2352,7 @@ var Header_component = normalizeComponent(
 )
 
 /* harmony default export */ var Header = (Header_component.exports);
-// EXTERNAL MODULE: ./src/assets/scss/main.scss
-var main = __webpack_require__("c1c3");
-
 // CONCATENATED MODULE: ./src/plugin.js
-
 
 
 
