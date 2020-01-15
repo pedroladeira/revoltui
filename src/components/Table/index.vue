@@ -1,5 +1,8 @@
 <template>
-  <table class="v-table" :class="[getBorderedClass, getStripedClass, getHoverClass]">
+  <table
+    class="v-table"
+    :class="[getBorderedClass, getStripedClass, getHoverClass]"
+  >
     <thead>
       <tr>
         <th

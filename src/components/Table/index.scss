@@ -5,16 +5,21 @@ $table__cell-space: .55rem;
   border-spacing: 0;
 
   tr {
-    td, th {
+
+    td,
+    th {
       padding: $table__cell-space;
     }
+
     td {
       border-bottom: 1px solid #dcdbdb;
     }
+
     &:first-child {
       th {
         border-top: 1px solid #dcdbdb;
       }
+
       td {
         border-top: 2px solid #dcdbdb;
       }
@@ -22,8 +27,11 @@ $table__cell-space: .55rem;
   }
 
   &--bordered tr {
-    th, td {
+
+    th,
+    td {
       border-right: 1px solid #dcdbdb;
+
       &:first-child {
         border-left: 1px solid #dcdbdb;
       }
