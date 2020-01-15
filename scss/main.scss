@@ -12,9 +12,9 @@
 @import './utilities/borders';
 @import './utilities/background';
 
-@import './components/buttons';
-@import './components/cards';
-@import './components/badges';
+@import '../src/components/Buttons';
+@import '../src/components/Badges';
+@import '../src/components/Cards';
 @import './components/menus';
 @import './components/navbar';
 @import './components/icons';
@@ -24,5 +24,5 @@
 @import './components/layouts/admin';
 
 body {
-    font-size: 0.88rem;
+  font-size: 0.88rem;
 }
