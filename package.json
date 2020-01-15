@@ -1,6 +1,6 @@
 {
   "name": "revoltui",
-  "version": "0.1.001",
+  "version": "0.1.002",
   "scripts": {
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
