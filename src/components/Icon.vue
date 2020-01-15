@@ -25,13 +25,13 @@ export default {
       return "";
     },
     getBordered() {
-      return this.border ? 'v-icon--border' : '';
+      return this.border ? "v-icon--border" : "";
     },
     getIconName() {
       if (this.$slots.default) {
         return this.$slots.default[0].text;
       }
-      return '';
+      return "";
     }
   }
 };

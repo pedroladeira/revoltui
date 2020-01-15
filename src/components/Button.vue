@@ -1,6 +1,9 @@
 <template>
-  <button class="v-button py-1 px-2" :class="[getColorClass, getShadowClass]"
-    @click="onClick">
+  <button
+    class="v-button py-1 px-2"
+    :class="[getColorClass, getShadowClass]"
+    @click="onClick"
+  >
     <slot></slot>
   </button>
 </template>
@@ -34,7 +37,7 @@ export default {
   },
   methods: {
     onClick() {
-      this.$emit('click');
+      this.$emit("click");
     }
   }
 };
