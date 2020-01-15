@@ -12,17 +12,17 @@
 @import './utilities/borders';
 @import './utilities/background';
 
-@import './components/buttons';
-@import './components/cards';
-@import './components/badges';
-@import './components/menus';
-@import './components/navbar';
-@import './components/icons';
-@import './components/selects';
-@import './components/inputs';
-@import './components/tables';
-@import './components/layouts/admin';
+@import '../src/components/Buttons';
+@import '../src/components/Badges';
+@import '../src/components/Cards';
+@import '../src/components/Navbar';
+@import '../src/components/Menus';
+@import '../src/components/Select';
+@import '../src/components/Forms';
+@import '../src/components/Table';
+@import '../src/components/Layouts';
+@import '../src/components/Icons';
 
 body {
-    font-size: 0.88rem;
+  font-size: 0.88rem;
 }
