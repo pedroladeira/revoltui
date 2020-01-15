@@ -1,16 +1,18 @@
 import Button from "@/components/Buttons";
 import Badge from "@/components/Badges";
 import Card from "@/components/Cards";
-import LayoutAdmin from "@/components/LayoutAdmin.vue";
-import Navbar from "@/components/Navbar.vue";
-import Menu from "@/components/Menu.vue";
-import MenuItem from "@/components/MenuItem.vue";
-import Icon from "@/components/Icon.vue";
-import Select from "@/components/Select.vue";
-import SelectItem from "@/components/SelectItem.vue";
-import Input from "@/components/Input.vue";
-import Table from "@/components/Table.vue";
-import Header from "@/components/Header.vue";
+import Navbar from "@/components/Navbar";
+import Menu from "@/components/Menus";
+import MenuItem from "@/components/Menus/Item";
+import Select from "@/components/Select";
+import SelectItem from "@/components/Select/Item";
+import { Input } from "@/components/Forms/index.js";
+import Table from "@/components/Table";
+import TableRow from "@/components/Table/Row";
+import TableColumn from "@/components/Table/Column";
+import Header from "@/components/Header";
+import { LayoutAdmin } from "@/components/Layouts";
+import Icon from "@/components/Icons";
 
 export default {
   install(Vue) {
@@ -26,6 +28,8 @@ export default {
     Vue.component(SelectItem.name, SelectItem);
     Vue.component(Input.name, Input);
     Vue.component(Table.name, Table);
+    Vue.component(TableRow.name, TableRow);
+    Vue.component(TableColumn.name, TableColumn);
     Vue.component(Header.name, Header);
   }
 };
