@@ -2,11 +2,8 @@
   "name": "revoltui",
   "version": "0.1.002",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "lint": "vue-cli-service lint",
-    "build:docs": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --dest dist --target lib --name revoltui src/plugin.js --formats commonjs",
-    "build": "yarn build:lib && yarn build:docs"
+    "serve": "vue-cli-service serve ./src/examples.js",
+    "build": "vue-cli-service build --dest dist --target lib --name revoltui src/plugin.js --formats commonjs"
   },
   "main": "./dist/revoltui.common.js",
   "dependencies": {
