@@ -17,6 +17,7 @@ yarn add revoltui
 ```javascript
 import Vue from 'vue';
 import RevoltUI from 'revoltui';
+import 'revoltui/scss/main.scss';
 
 Vue.use(RevoltUI);
 ```

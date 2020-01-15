@@ -1,0 +1,25 @@
+.v-layout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--layout-bg-color);
+
+  &__container {
+    height: calc(100% - var(--navbar-height));
+  }
+
+  &__aside {
+    width: var(--layout-aside-width);
+    height: 100%;
+    overflow: none;
+    overflow-y: scroll;
+    box-shadow: var(--border-shadow);
+    background-color: var(--layout-aside-bg-color);
+  }
+
+  &__content {
+    overflow: scroll;
+  }
+}
