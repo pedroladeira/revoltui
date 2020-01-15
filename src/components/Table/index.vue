@@ -1,5 +1,5 @@
 <template>
-  <table class="v-table" :class="[getBorderedClass]">
+  <table class="v-table" :class="[getBorderedClass, getStripedClass, getHoverClass]">
     <thead>
       <tr>
         <th
@@ -22,10 +22,16 @@
 <script>
 export default {
   name: "v-table",
-  props: ["heads", "bordered"],
+  props: ["heads", "bordered", "striped", "hover"],
   computed: {
     getBorderedClass() {
       return this.bordered ? "v-table--bordered" : "";
+    },
+    getStripedClass() {
+      return this.striped ? "v-table--striped" : "";
+    },
+    getHoverClass() {
+      return this.hover ? "v-table--hover" : "";
     }
   }
 };
