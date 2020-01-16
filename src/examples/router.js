@@ -10,6 +10,7 @@ import Header from "@/examples/Header";
 import Tables from "@/examples/Tables";
 import Layouts from "@/examples/Layouts";
 import Icons from "@/examples/Icons";
+import List from "@/examples/List";
 
 Vue.use(VueRouter);
 
@@ -63,6 +64,11 @@ const routes = [
     name: "Icons",
     path: "/icons",
     component: Icons
+  },
+  {
+    name: "List",
+    path: "/list",
+    component: List
   }
 ];
 

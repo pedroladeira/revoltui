@@ -10,6 +10,10 @@
   font-weight: 400;
   line-height: 1.5;
 
+  &[type=checkbox] {
+    height: auto;
+  }
+
   &:focus {
     border-color: #a9bcee;
     outline: 0;

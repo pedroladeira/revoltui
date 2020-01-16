@@ -13,6 +13,8 @@ import TableColumn from "@/components/Table/Column";
 import Header from "@/components/Header";
 import { LayoutAdmin } from "@/components/Layouts";
 import Icon from "@/components/Icons";
+import List from "@/components/List";
+import ListItem from "@/components/List/Item";
 
 export default {
   install(Vue) {
@@ -31,5 +33,7 @@ export default {
     Vue.component(TableRow.name, TableRow);
     Vue.component(TableColumn.name, TableColumn);
     Vue.component(Header.name, Header);
+    Vue.component(List.name, List);
+    Vue.component(ListItem.name, ListItem);
   }
 };

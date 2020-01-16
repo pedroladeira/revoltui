@@ -10,6 +10,14 @@
     <slot></slot>
   </select>
   <input
+    v-else-if="getType === 'checkbox'"
+    :type="getType"
+    class="v-input"
+    :class="[getColorClass]"
+    @input="onInput"
+    :checked="currentValue"
+  />
+  <input
     v-else
     :type="getType"
     :placeholder="placeholder"
