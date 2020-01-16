@@ -11,6 +11,7 @@ import Tables from "@/examples/Tables";
 import Layouts from "@/examples/Layouts";
 import Icons from "@/examples/Icons";
 import List from "@/examples/List";
+import Dropdown from "@/examples/Dropdown";
 
 Vue.use(VueRouter);
 
@@ -69,6 +70,11 @@ const routes = [
     name: "List",
     path: "/list",
     component: List
+  },
+  {
+    name: "Dropdown",
+    path: "/dropdown",
+    component: Dropdown
   }
 ];
 

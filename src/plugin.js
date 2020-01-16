@@ -15,6 +15,7 @@ import { LayoutAdmin } from "@/components/Layouts";
 import Icon from "@/components/Icons";
 import List from "@/components/List";
 import ListItem from "@/components/List/Item";
+import Dropdown from "@/components/Dropdown";
 
 export default {
   install(Vue) {
@@ -35,5 +36,6 @@ export default {
     Vue.component(Header.name, Header);
     Vue.component(List.name, List);
     Vue.component(ListItem.name, ListItem);
+    Vue.component(Dropdown.name, Dropdown);
   }
 };
