@@ -1,0 +1,19 @@
+.v-dropdown {
+  display: inline-block;
+  position: relative;
+
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0px, 33px);
+
+    &>ul {
+      background-color: red;
+    }
+  }
+
+  &-item {
+    white-space: nowrap;
+  }
+}
