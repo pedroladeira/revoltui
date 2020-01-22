@@ -1,8 +1,11 @@
 $table__cell-space: .55rem;
+$table__search-space-y: 15px;
 
 .v-table {
-  width: 100%;
-  border-spacing: 0;
+  table {
+    width: 100%;
+    border-spacing: 0;
+  }
 
   tr {
 
@@ -44,5 +47,12 @@ $table__cell-space: .55rem;
 
   &--hover tbody tr:hover {
     background-color: #e0f3ff;
+    cursor: pointer;
+  }
+
+  // Search element
+  &__search {
+    margin-top: $table__search-space-y;
+    margin-bottom: $table__search-space-y;
   }
 }

@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     onInput(data) {
-      this.$emit("input", data);
+      this.$emit("input", data.target.value);
     }
   }
 };
