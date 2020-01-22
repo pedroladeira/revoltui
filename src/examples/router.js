@@ -12,6 +12,8 @@ import Layouts from "@/examples/Layouts";
 import Icons from "@/examples/Icons";
 import List from "@/examples/List";
 import Dropdown from "@/examples/Dropdown";
+import Notifications from "@/examples/Notifications";
+import Calendar from "@/examples/advanced/Calendar";
 
 Vue.use(VueRouter);
 
@@ -75,6 +77,16 @@ const routes = [
     name: "Dropdown",
     path: "/dropdown",
     component: Dropdown
+  },
+  {
+    name: "Notifications",
+    path: "/notifications",
+    component: Notifications
+  },
+  {
+    name: "Calendar",
+    path: "/advanced/calendar",
+    component: Calendar
   }
 ];
 

@@ -16,9 +16,13 @@ import Icon from "@/components/Icons";
 import List from "@/components/List";
 import ListItem from "@/components/List/Item";
 import Dropdown from "@/components/Dropdown";
+import Calendar from "@/components/Calendar";
+import Notification from "@/components/Notifications";
+import HelloWeek from "vue-hello-week";
 
 export default {
   install(Vue) {
+    Vue.use(HelloWeek);
     Vue.component(Button.name, Button);
     Vue.component(LayoutAdmin.name, LayoutAdmin);
     Vue.component(Navbar.name, Navbar);
@@ -37,5 +41,7 @@ export default {
     Vue.component(List.name, List);
     Vue.component(ListItem.name, ListItem);
     Vue.component(Dropdown.name, Dropdown);
+    Vue.component(Calendar.name, Calendar);
+    Vue.component(Notification.name, Notification);
   }
 };

@@ -1,26 +1,31 @@
 .text {
-    &-center {
-        text-align: center;
-    }
+  &-center {
+    text-align: center;
+  }
 
-    &-left {
-        text-align: left;
-    }
+  &-left {
+    text-align: left;
+  }
 
-    @each $var, $val in $colors {
-        &-#{$var} {
-            color: $val;
-        }
-    }
+  &-right {
+    text-align: right;
+  }
 
-    &-noselection {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
+  @each $var,
+  $val in $colors {
+    &-#{$var} {
+      color: $val;
     }
+  }
+
+  &-noselection {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 }
 
 .uppercase {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
