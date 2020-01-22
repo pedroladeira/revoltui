@@ -1,0 +1,13 @@
+$v-notifications-container-margin: 15px;
+
+.v-notification {
+  position: absolute;
+
+  &--right {
+    right: $v-notifications-container-margin;
+  }
+
+  &--top {
+    top: $v-notifications-container-margin;
+  }
+}
