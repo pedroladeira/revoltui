@@ -17,6 +17,7 @@ import List from "@/components/List";
 import ListItem from "@/components/List/Item";
 import Dropdown from "@/components/Dropdown";
 import Notification from "@/components/Notifications";
+import Spacer from "@/components/Spacer";
 
 import Calendar from "@/components/Advanced/Calendar";
 import HelloWeek from "vue-hello-week";
@@ -46,6 +47,7 @@ export default {
     Vue.component(ListItem.name, ListItem);
     Vue.component(Dropdown.name, Dropdown);
     Vue.component(Notification.name, Notification);
+    Vue.component(Spacer.name, Spacer);
     // import advanced components
     Vue.component(Calendar.name, Calendar);
   }
