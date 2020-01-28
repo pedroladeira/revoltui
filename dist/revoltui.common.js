@@ -2654,12 +2654,12 @@ var Menus_component = normalizeComponent(
 )
 
 /* harmony default export */ var Menus = (Menus_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"08ff0cdb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Menus/Item.vue?vue&type=template&id=12cc3c58&
-var Itemvue_type_template_id_12cc3c58_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-menu-item w-full cursor-pointer text-noselection",on:{"click":_vm.onClick}},[_c('div',{staticClass:"px-2"},[_c('span',{staticClass:"text-sm"},[_vm._t("default")],2)])])}
-var Itemvue_type_template_id_12cc3c58_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"08ff0cdb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Menus/Item.vue?vue&type=template&id=4932825a&
+var Itemvue_type_template_id_4932825a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('li',{staticClass:"v-menu-item w-full cursor-pointer text-noselection",on:{"click":_vm.onClick}},[_c('div',{staticClass:"px-2"},[_c('span',{staticClass:"text-sm"},[_vm._t("default")],2)])])}
+var Itemvue_type_template_id_4932825a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Menus/Item.vue?vue&type=template&id=12cc3c58&
+// CONCATENATED MODULE: ./src/components/Menus/Item.vue?vue&type=template&id=4932825a&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Menus/Item.vue?vue&type=script&lang=js&
 //
@@ -2707,8 +2707,8 @@ var Itemvue_type_template_id_12cc3c58_staticRenderFns = []
 
 var Item_component = normalizeComponent(
   Menus_Itemvue_type_script_lang_js_,
-  Itemvue_type_template_id_12cc3c58_render,
-  Itemvue_type_template_id_12cc3c58_staticRenderFns,
+  Itemvue_type_template_id_4932825a_render,
+  Itemvue_type_template_id_4932825a_staticRenderFns,
   false,
   null,
   null,

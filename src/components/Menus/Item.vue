@@ -1,5 +1,5 @@
 <template>
-  <div
+  <li
     @click="onClick"
     class="v-menu-item w-full cursor-pointer text-noselection"
   >
@@ -8,7 +8,7 @@
         <slot></slot>
       </span>
     </div>
-  </div>
+  </li>
 </template>
 
 <script>
