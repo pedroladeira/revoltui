@@ -4,7 +4,7 @@
 
 with npm
 ```
-npm add revoltui
+npm install revoltui --save
 ```
 
 with yarn
