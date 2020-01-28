@@ -1,13 +1,13 @@
 .w {
-    @for $var from 1 to 13 {
-        &-#{$var} {
-            width: ($var / 4) * 1rem;
-        }
+  @for $var from 1 to 13 {
+    &-#{$var} {
+      width: ($var / 4) * 1rem;
     }
+  }
 }
 
 .h {
-    &-full {
-        height: 100%;
-    }
+  &-full {
+    height: 100%;
+  }
 }

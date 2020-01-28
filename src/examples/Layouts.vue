@@ -14,5 +14,10 @@
         This is some layout
       </v-layout-admin>
     </div>
+    <div class="m-8" style="position: relative; height: 500px">
+      <v-layout-center>
+        This is center layout
+      </v-layout-center>
+    </div>
   </div>
 </template>

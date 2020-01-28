@@ -1,1 +1,13 @@
-.v-calendar {}
+.v-calendar {
+  &--revoltui {
+
+    .day {
+      height: 150px;
+      border: 1px solid transparent;
+
+      &.is-selected {
+        border: 1px solid black;
+      }
+    }
+  }
+}

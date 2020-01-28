@@ -11,6 +11,7 @@
 @import './utilities/text';
 @import './utilities/borders';
 @import './utilities/background';
+@import './utilities/responsive';
 
 @import '../src/components/Buttons';
 @import '../src/components/Badges';
@@ -24,6 +25,7 @@
 @import '../src/components/Icons';
 @import '../src/components/List';
 @import '../src/components/Notifications';
+@import '../src/components/Advanced/Calendar';
 
 body {
   font-size: 0.88rem;

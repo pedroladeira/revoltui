@@ -11,7 +11,7 @@ import Table from "@/components/Table";
 import TableRow from "@/components/Table/Row";
 import TableColumn from "@/components/Table/Column";
 import Header from "@/components/Header";
-import { LayoutAdmin } from "@/components/Layouts";
+import { LayoutAdmin, LayoutCenter } from "@/components/Layouts";
 import Icon from "@/components/Icons";
 import List from "@/components/List";
 import ListItem from "@/components/List/Item";
@@ -28,6 +28,7 @@ export default {
     // import components
     Vue.component(Button.name, Button);
     Vue.component(LayoutAdmin.name, LayoutAdmin);
+    Vue.component(LayoutCenter.name, LayoutCenter);
     Vue.component(Navbar.name, Navbar);
     Vue.component(Card.name, Card);
     Vue.component(Badge.name, Badge);
