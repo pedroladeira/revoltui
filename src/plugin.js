@@ -20,12 +20,9 @@ import Notification from "@/components/Notifications";
 import Spacer from "@/components/Spacer";
 
 import Calendar from "@/components/Advanced/Calendar";
-import HelloWeek from "vue-hello-week";
 
 export default {
   install(Vue) {
-    // import external plugins
-    Vue.use(HelloWeek);
     // import components
     Vue.component(Button.name, Button);
     Vue.component(LayoutAdmin.name, LayoutAdmin);
