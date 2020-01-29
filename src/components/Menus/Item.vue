@@ -14,19 +14,32 @@
 <script>
 export default {
   name: "v-menu-item",
-  props: ["to", "target"],
+  props: {
+    to: {
+      required: false,
+      type: String
+    },
+    link: {
+      required: false,
+      type: String
+    },
+    target: {
+      required: false,
+      type: String,
+      default: "_self"
+    }
+  },
   methods: {
     onClick() {
-      if (this.to) {
-        if (this.$router) {
-          if (this.$route.path !== this.to) {
-            this.$router.push(this.to);
-          }
-        } else {
-          //TODO fix
-          window.location.href = this.to;
+      if (this.to && this.$router) {
+        if (this.$route.path !== this.to) {
+          this.$router.push(this.to);
         }
         this.$emit("click", this.to);
+      }
+      if (!this.to && this.link) {
+        window.open(this.link, this.target);
+        this.$emit("click", this.link);
       }
     }
   }
