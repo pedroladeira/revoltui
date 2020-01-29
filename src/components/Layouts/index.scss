@@ -12,6 +12,7 @@
 
   &__aside {
     width: var(--layout-aside-width);
+    min-width: var(--layout-aside-width);
     height: 100%;
     overflow: none;
     overflow-y: scroll;

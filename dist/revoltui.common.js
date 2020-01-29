@@ -3291,12 +3291,12 @@ var Spacer_component = normalizeComponent(
 )
 
 /* harmony default export */ var Spacer = (Spacer_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3d219503-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Advanced/Calendar/index.vue?vue&type=template&id=529554a6&
-var Calendarvue_type_template_id_529554a6_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-calendar"},[(_vm.helloWeekCalendarIsLoaded)?_c('v-hello-week',{attrs:{"options":_vm.options,"theme":_vm.theme}}):_c('span',[_vm._v(" The plugin "),_c('a',{attrs:{"href":"https://github.com/pedroladeira/vue-hello-week","target":"_blank"}},[_vm._v("VueHelloWeek")]),_vm._v(" is not instaled! ")])],1)}
-var Calendarvue_type_template_id_529554a6_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3d219503-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Advanced/Calendar/index.vue?vue&type=template&id=85b158a8&
+var Calendarvue_type_template_id_85b158a8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-calendar"},[(_vm.helloWeekCalendarIsLoaded)?_c('v-hello-week',{attrs:{"options":_vm.options,"theme":_vm.theme}}):_c('span',[_vm._v(" The plugin "),_c('a',{attrs:{"href":"https://github.com/pedroladeira/vue-hello-week","target":"_blank"}},[_vm._v("VueHelloWeek")]),_vm._v(" is not instaled! ")])],1)}
+var Calendarvue_type_template_id_85b158a8_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Advanced/Calendar/index.vue?vue&type=template&id=529554a6&
+// CONCATENATED MODULE: ./src/components/Advanced/Calendar/index.vue?vue&type=template&id=85b158a8&
 
 // EXTERNAL MODULE: external {"commonjs":"vue","commonjs2":"vue","root":"Vue"}
 var external_commonjs_vue_commonjs2_vue_root_Vue_ = __webpack_require__("8bbf");
@@ -3338,7 +3338,6 @@ var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpac
     return {
       options: {
         beforeCreateDay: function beforeCreateDay(data) {
-          data.node.children = [data.node.children[0], "<div>hello</div>"];
           return data;
         }
       }
@@ -3357,8 +3356,8 @@ var external_commonjs_vue_commonjs2_vue_root_Vue_default = /*#__PURE__*/__webpac
 
 var Calendar_component = normalizeComponent(
   Advanced_Calendarvue_type_script_lang_js_,
-  Calendarvue_type_template_id_529554a6_render,
-  Calendarvue_type_template_id_529554a6_staticRenderFns,
+  Calendarvue_type_template_id_85b158a8_render,
+  Calendarvue_type_template_id_85b158a8_staticRenderFns,
   false,
   null,
   null,

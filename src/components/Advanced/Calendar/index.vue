@@ -35,7 +35,6 @@ export default {
     return {
       options: {
         beforeCreateDay: data => {
-          data.node.children = [data.node.children[0], "<div>hello</div>"];
           return data;
         }
       }
