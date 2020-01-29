@@ -24,3 +24,15 @@ import 'revoltui/scss/main.scss';
 
 Vue.use(RevoltUI);
 ```
+
+
+## Using icons
+
+### FontAwesome Icons
+
+Add the these imports to your code to use default icons
+
+```javascript
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
+```
