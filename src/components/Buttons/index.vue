@@ -4,14 +4,37 @@
     :class="[getColorClass, getShadowClass]"
     @click="onClick"
   >
+    <v-icon v-if="icon && !iconRight" class="mr-2">{{ icon }}</v-icon>
     <slot></slot>
+    <v-icon v-if="icon && iconRight" class="ml-2">{{ icon }}</v-icon>
   </button>
 </template>
 
 <script>
 export default {
   name: "v-button",
-  props: ["color", "no-shadow"],
+  props: {
+    color: {
+      required: false,
+      type: String,
+      default: null
+    },
+    icon: {
+      required: false,
+      type: String,
+      default: null
+    },
+    iconRight: {
+      required: false,
+      type: Boolean,
+      default: false
+    },
+    noShadow: {
+      required: false,
+      type: Boolean,
+      default: false
+    }
+  },
   computed: {
     getColorClass() {
       if (

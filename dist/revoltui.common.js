@@ -1829,12 +1829,12 @@ if (typeof window !== 'undefined') {
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.function.name.js
 var es_function_name = __webpack_require__("b0c0");
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3d219503-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Buttons/index.vue?vue&type=template&id=0e7fb3ea&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"v-button py-1 px-2",class:[_vm.getColorClass, _vm.getShadowClass],on:{"click":_vm.onClick}},[_vm._t("default")],2)}
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3d219503-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Buttons/index.vue?vue&type=template&id=59551a41&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('button',{staticClass:"v-button py-1 px-2",class:[_vm.getColorClass, _vm.getShadowClass],on:{"click":_vm.onClick}},[(_vm.icon && !_vm.iconRight)?_c('v-icon',{staticClass:"mr-2"},[_vm._v(_vm._s(_vm.icon))]):_vm._e(),_vm._t("default"),(_vm.icon && _vm.iconRight)?_c('v-icon',{staticClass:"ml-2"},[_vm._v(_vm._s(_vm.icon))]):_vm._e()],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Buttons/index.vue?vue&type=template&id=0e7fb3ea&
+// CONCATENATED MODULE: ./src/components/Buttons/index.vue?vue&type=template&id=59551a41&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.index-of.js
 var es_array_index_of = __webpack_require__("c975");
@@ -1851,9 +1851,32 @@ var es_array_index_of = __webpack_require__("c975");
 //
 //
 //
+//
+//
 /* harmony default export */ var Buttonsvue_type_script_lang_js_ = ({
   name: "v-button",
-  props: ["color", "no-shadow"],
+  props: {
+    color: {
+      required: false,
+      type: String,
+      default: null
+    },
+    icon: {
+      required: false,
+      type: String,
+      default: null
+    },
+    iconRight: {
+      required: false,
+      type: Boolean,
+      default: false
+    },
+    noShadow: {
+      required: false,
+      type: Boolean,
+      default: false
+    }
+  },
   computed: {
     getColorClass: function getColorClass() {
       if (["primary", "secondary", "info", "success", "danger", "warning"].indexOf(this.color) > -1) {
