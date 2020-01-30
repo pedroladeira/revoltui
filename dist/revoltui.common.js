@@ -2473,12 +2473,12 @@ var Select_Item_component = normalizeComponent(
 )
 
 /* harmony default export */ var Select_Item = (Select_Item_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3d219503-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Forms/Input.vue?vue&type=template&id=52c2a6b2&
-var Inputvue_type_template_id_52c2a6b2_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.getType === 'select')?_c('select',{staticClass:"v-input",class:[_vm.getColorClass],attrs:{"placeholder":_vm.placeholder},domProps:{"value":_vm.currentValue},on:{"input":_vm.onInput}},[_vm._t("default")],2):(_vm.getType === 'checkbox')?_c('input',{staticClass:"v-input",class:[_vm.getColorClass],attrs:{"type":_vm.getType},domProps:{"checked":_vm.currentValue},on:{"input":_vm.onInput}}):_c('input',{staticClass:"v-input",class:[_vm.getColorClass],attrs:{"type":_vm.getType,"placeholder":_vm.placeholder},domProps:{"value":_vm.currentValue},on:{"input":_vm.onInput}})}
-var Inputvue_type_template_id_52c2a6b2_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3d219503-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Forms/Input.vue?vue&type=template&id=0849e72f&
+var Inputvue_type_template_id_0849e72f_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"mb-2"},[(_vm.label)?_c('label',[_vm._v(_vm._s(_vm.label))]):_vm._e(),(_vm.getType === 'select')?_c('select',{staticClass:"v-input",class:[_vm.getColorClass],attrs:{"placeholder":_vm.placeholder},domProps:{"value":_vm.currentValue},on:{"input":_vm.onInput}},[_vm._t("default")],2):(_vm.getType === 'textarea')?_c('textarea',{staticClass:"v-input",class:[_vm.getColorClass],attrs:{"type":_vm.getType,"placeholder":_vm.placeholder,"rows":"5"},domProps:{"value":_vm.currentValue},on:{"input":_vm.onInput}}):(_vm.getType === 'checkbox')?_c('input',{staticClass:"v-input",class:[_vm.getColorClass],attrs:{"type":_vm.getType},domProps:{"checked":_vm.currentValue},on:{"input":_vm.onInput}}):_c('input',{staticClass:"v-input",class:[_vm.getColorClass],attrs:{"type":_vm.getType,"placeholder":_vm.placeholder},domProps:{"value":_vm.currentValue},on:{"input":_vm.onInput}}),(_vm.message)?_c('span',{staticClass:"color-gray"},[_c('i',[_vm._v(_vm._s(_vm.message))])]):_vm._e()])}
+var Inputvue_type_template_id_0849e72f_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Forms/Input.vue?vue&type=template&id=52c2a6b2&
+// CONCATENATED MODULE: ./src/components/Forms/Input.vue?vue&type=template&id=0849e72f&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Forms/Input.vue?vue&type=script&lang=js&
 
@@ -2512,9 +2512,56 @@ var Inputvue_type_template_id_52c2a6b2_staticRenderFns = []
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ var Inputvue_type_script_lang_js_ = ({
   name: "v-input",
-  props: ["color", "type", "value", "placeholder"],
+  props: {
+    color: {
+      required: false,
+      type: String,
+      default: null
+    },
+    type: {
+      required: false,
+      type: String,
+      default: "text"
+    },
+    value: {
+      required: false,
+      type: String,
+      default: null
+    },
+    placeholder: {
+      required: false,
+      type: String,
+      default: null
+    },
+    label: {
+      required: false,
+      type: String,
+      default: null
+    },
+    message: {
+      required: false,
+      type: String,
+      default: null
+    }
+  },
   computed: {
     getColorClass: function getColorClass() {
       if (["primary", "secondary", "info", "success", "danger", "warning"].indexOf(this.color) > -1) {
@@ -2555,8 +2602,8 @@ var Inputvue_type_template_id_52c2a6b2_staticRenderFns = []
 
 var Input_component = normalizeComponent(
   Forms_Inputvue_type_script_lang_js_,
-  Inputvue_type_template_id_52c2a6b2_render,
-  Inputvue_type_template_id_52c2a6b2_staticRenderFns,
+  Inputvue_type_template_id_0849e72f_render,
+  Inputvue_type_template_id_0849e72f_staticRenderFns,
   false,
   null,
   null,

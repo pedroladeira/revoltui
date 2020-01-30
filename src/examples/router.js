@@ -14,6 +14,7 @@ import List from "@/examples/List";
 import Dropdown from "@/examples/Dropdown";
 import Notifications from "@/examples/Notifications";
 import Spacer from "@/examples/Spacer";
+import Forms from "@/examples/Forms";
 import Calendar from "@/examples/advanced/Calendar";
 
 Vue.use(VueRouter);
@@ -83,6 +84,11 @@ const routes = [
     name: "Notifications",
     path: "/notifications",
     component: Notifications
+  },
+  {
+    name: "Forms",
+    path: "/forms",
+    component: Forms
   },
   {
     name: "Spacer",
