@@ -11,7 +11,12 @@
 <script>
 export default {
   name: "v-select-item",
-  props: ["value"],
+  props: {
+    value: {
+      required: false,
+      default: null
+    }
+  },
   methods: {
     onClick() {
       this.$emit("click", this.value);

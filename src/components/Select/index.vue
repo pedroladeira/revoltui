@@ -16,7 +16,18 @@
 <script>
 export default {
   name: "v-select",
-  props: ["color", "placeholder"],
+  props: {
+    color: {
+      required: false,
+      type: String,
+      default: null
+    },
+    placeholder: {
+      required: false,
+      type: String,
+      default: null
+    }
+  },
   computed: {
     getColorClass() {
       if (

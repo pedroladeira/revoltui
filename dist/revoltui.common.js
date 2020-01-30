@@ -2344,12 +2344,12 @@ var Item_component = normalizeComponent(
 )
 
 /* harmony default export */ var Item = (Item_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3d219503-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Select/index.vue?vue&type=template&id=2cae3ce5&
-var Selectvue_type_template_id_2cae3ce5_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-select cursor-pointer",class:[_vm.getVisibleList],on:{"click":_vm.toggleList}},[_c('div',{staticClass:"v-select__selection"},[_c('span',[_vm._v(_vm._s(_vm.getSelectedText))])]),_c('div',{staticClass:"v-select__options"},[_vm._t("default")],2)])}
-var Selectvue_type_template_id_2cae3ce5_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3d219503-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Select/index.vue?vue&type=template&id=52cce29a&
+var Selectvue_type_template_id_52cce29a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-select cursor-pointer",class:[_vm.getVisibleList],on:{"click":_vm.toggleList}},[_c('div',{staticClass:"v-select__selection"},[_c('span',[_vm._v(_vm._s(_vm.getSelectedText))])]),_c('div',{staticClass:"v-select__options"},[_vm._t("default")],2)])}
+var Selectvue_type_template_id_52cce29a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Select/index.vue?vue&type=template&id=2cae3ce5&
+// CONCATENATED MODULE: ./src/components/Select/index.vue?vue&type=template&id=52cce29a&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.array.for-each.js
 var es_array_for_each = __webpack_require__("4160");
@@ -2378,7 +2378,18 @@ var web_dom_collections_for_each = __webpack_require__("159b");
 //
 /* harmony default export */ var Selectvue_type_script_lang_js_ = ({
   name: "v-select",
-  props: ["color", "placeholder"],
+  props: {
+    color: {
+      required: false,
+      type: String,
+      default: null
+    },
+    placeholder: {
+      required: false,
+      type: String,
+      default: null
+    }
+  },
   computed: {
     getColorClass: function getColorClass() {
       if (["primary", "secondary", "info", "success", "danger", "warning"].indexOf(this.color) > -1) {
@@ -2437,8 +2448,8 @@ var web_dom_collections_for_each = __webpack_require__("159b");
 
 var Select_component = normalizeComponent(
   components_Selectvue_type_script_lang_js_,
-  Selectvue_type_template_id_2cae3ce5_render,
-  Selectvue_type_template_id_2cae3ce5_staticRenderFns,
+  Selectvue_type_template_id_52cce29a_render,
+  Selectvue_type_template_id_52cce29a_staticRenderFns,
   false,
   null,
   null,
@@ -2447,12 +2458,12 @@ var Select_component = normalizeComponent(
 )
 
 /* harmony default export */ var Select = (Select_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3d219503-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Select/Item.vue?vue&type=template&id=470a56a0&
-var Itemvue_type_template_id_470a56a0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-select-item cursor-pointer",on:{"click":_vm.onClick}},[_c('div',{staticClass:"px-2"},[_c('span',{staticClass:"text-sm"},[_vm._t("default")],2)])])}
-var Itemvue_type_template_id_470a56a0_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3d219503-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Select/Item.vue?vue&type=template&id=6490d634&
+var Itemvue_type_template_id_6490d634_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-select-item cursor-pointer",on:{"click":_vm.onClick}},[_c('div',{staticClass:"px-2"},[_c('span',{staticClass:"text-sm"},[_vm._t("default")],2)])])}
+var Itemvue_type_template_id_6490d634_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Select/Item.vue?vue&type=template&id=470a56a0&
+// CONCATENATED MODULE: ./src/components/Select/Item.vue?vue&type=template&id=6490d634&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Select/Item.vue?vue&type=script&lang=js&
 //
@@ -2467,7 +2478,12 @@ var Itemvue_type_template_id_470a56a0_staticRenderFns = []
 //
 /* harmony default export */ var Select_Itemvue_type_script_lang_js_ = ({
   name: "v-select-item",
-  props: ["value"],
+  props: {
+    value: {
+      required: false,
+      default: null
+    }
+  },
   methods: {
     onClick: function onClick() {
       this.$emit("click", this.value);
@@ -2486,8 +2502,8 @@ var Itemvue_type_template_id_470a56a0_staticRenderFns = []
 
 var Select_Item_component = normalizeComponent(
   components_Select_Itemvue_type_script_lang_js_,
-  Itemvue_type_template_id_470a56a0_render,
-  Itemvue_type_template_id_470a56a0_staticRenderFns,
+  Itemvue_type_template_id_6490d634_render,
+  Itemvue_type_template_id_6490d634_staticRenderFns,
   false,
   null,
   null,
