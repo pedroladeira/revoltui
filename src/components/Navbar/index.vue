@@ -2,14 +2,15 @@
   <nav class="v-navbar">
     <div class="flex">
       <div
-        v-if="title"
+        v-if="title || hasTitleSlot"
         :class="{
           'cursor-pointer': link
         }"
         class="v-navbar__title"
         @click="onClickTitle"
       >
-        <h1>{{ title }}</h1>
+        <slot v-if="hasTitleSlot" name="title"></slot>
+        <h1 v-else>{{ title }}</h1>
       </div>
       <slot></slot>
       <div class="flex flex-1">
@@ -24,6 +25,11 @@
 export default {
   name: "v-navbar",
   props: ["title", "link"],
+  computed: {
+    hasTitleSlot() {
+      return !!this.$slots["title"];
+    }
+  },
   methods: {
     onClickTitle() {
       if (this.link) {
