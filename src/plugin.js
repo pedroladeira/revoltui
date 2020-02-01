@@ -18,6 +18,7 @@ import ListItem from "@/components/List/Item";
 import Dropdown from "@/components/Dropdown";
 import Notification from "@/components/Notifications";
 import Spacer from "@/components/Spacer";
+import Pagination from "@/components/Pagination";
 
 import Calendar from "@/components/Advanced/Calendar";
 
@@ -45,6 +46,7 @@ export default {
     Vue.component(Dropdown.name, Dropdown);
     Vue.component(Notification.name, Notification);
     Vue.component(Spacer.name, Spacer);
+    Vue.component(Pagination.name, Pagination);
     // import advanced components
     Vue.component(Calendar.name, Calendar);
   }
