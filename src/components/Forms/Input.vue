@@ -104,6 +104,13 @@ export default {
       currentValue: ""
     };
   },
+  watch: {
+    value(val) {
+      if (val) {
+        this.currentValue = val;
+      }
+    }
+  },
   mounted() {
     if (this.value) {
       this.currentValue = this.value;
