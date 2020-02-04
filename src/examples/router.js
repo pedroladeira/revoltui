@@ -15,6 +15,7 @@ import Dropdown from "@/examples/Dropdown";
 import Notifications from "@/examples/Notifications";
 import Spacer from "@/examples/Spacer";
 import Pagination from "@/examples/Pagination";
+import Loading from "@/examples/Loading";
 import Forms from "@/examples/Forms";
 import Calendar from "@/examples/advanced/Calendar";
 
@@ -100,6 +101,11 @@ const routes = [
     name: "Pagination",
     path: "/pagination",
     component: Pagination
+  },
+  {
+    name: "Loading",
+    path: "/loading",
+    component: Loading
   },
   {
     name: "Calendar",
