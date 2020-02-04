@@ -3521,6 +3521,43 @@ var Pagination_component = normalizeComponent(
 )
 
 /* harmony default export */ var Pagination = (Pagination_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3d219503-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Loading/index.vue?vue&type=template&id=6a293c58&
+var Loadingvue_type_template_id_6a293c58_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-loading"})}
+var Loadingvue_type_template_id_6a293c58_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/Loading/index.vue?vue&type=template&id=6a293c58&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Loading/index.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+/* harmony default export */ var Loadingvue_type_script_lang_js_ = ({
+  name: "v-loading"
+});
+// CONCATENATED MODULE: ./src/components/Loading/index.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_Loadingvue_type_script_lang_js_ = (Loadingvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/Loading/index.vue
+
+
+
+
+
+/* normalize component */
+
+var Loading_component = normalizeComponent(
+  components_Loadingvue_type_script_lang_js_,
+  Loadingvue_type_template_id_6a293c58_render,
+  Loadingvue_type_template_id_6a293c58_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Loading = (Loading_component.exports);
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"3d219503-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Advanced/Calendar/index.vue?vue&type=template&id=85b158a8&
 var Calendarvue_type_template_id_85b158a8_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"v-calendar"},[(_vm.helloWeekCalendarIsLoaded)?_c('v-hello-week',{attrs:{"options":_vm.options,"theme":_vm.theme}}):_c('span',[_vm._v(" The plugin "),_c('a',{attrs:{"href":"https://github.com/pedroladeira/vue-hello-week","target":"_blank"}},[_vm._v("VueHelloWeek")]),_vm._v(" is not instaled! ")])],1)}
 var Calendarvue_type_template_id_85b158a8_staticRenderFns = []
@@ -3620,6 +3657,7 @@ var Calendar_component = normalizeComponent(
 
 
 
+
 /* harmony default export */ var src_plugin = ({
   install: function install(Vue) {
     // import components
@@ -3644,7 +3682,8 @@ var Calendar_component = normalizeComponent(
     Vue.component(Dropdown.name, Dropdown);
     Vue.component(Notifications.name, Notifications);
     Vue.component(Spacer.name, Spacer);
-    Vue.component(Pagination.name, Pagination); // import advanced components
+    Vue.component(Pagination.name, Pagination);
+    Vue.component(Loading.name, Loading); // import advanced components
 
     Vue.component(Calendar.name, Calendar);
   }
