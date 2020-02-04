@@ -1,9 +1,10 @@
 {
   "name": "revoltui",
-  "version": "0.1.15-alpha",
+  "version": "0.1.21-alpha",
   "scripts": {
     "serve": "vue-cli-service serve ./src/examples.js",
-    "build": "vue-cli-service build --dest dist --target lib --name revoltui src/plugin.js --formats commonjs"
+    "build": "vue-cli-service build --dest dist --target lib --name revoltui src/plugin.js --formats commonjs",
+    "publish": "npm run build && npm publish"
   },
   "main": "./dist/revoltui.common.js",
   "dependencies": {
