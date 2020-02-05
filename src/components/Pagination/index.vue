@@ -3,13 +3,17 @@
     <v-button @click="prevPage">
       <slot name="btn-prev-content" />
     </v-button>
+    <v-button @click="selectFirstPage(p)">{{ "1" }}</v-button>
+    <span>...</span>
     <v-button
-      v-for="(p, i) in total"
+      v-for="(p, i) in getTotal.total"
       :key="i"
       :color="currPage === p ? 'primary' : null"
       @click="selectPage(p)"
       >{{ p }}</v-button
     >
+    <span>...</span>
+    <v-button @click="selectLastPage(p)">{{ total }}</v-button>
     <v-button @click="nextPage">
       <slot name="btn-next-content" />
     </v-button>
@@ -36,7 +40,14 @@ export default {
       default: null
     }
   },
-  computed: {},
+  computed: {
+    getTotal() {
+      return {
+        total: this.total < 5 ? this.total : 5,
+        hasMore: this.total >= 5
+      };
+    }
+  },
   data() {
     return {
       currPage: 1
@@ -69,7 +80,9 @@ export default {
         this.currPage--;
         this.onChange();
       }
-    }
+    },
+    selectFirstPage() {},
+    selectLastPage() {}
   }
 };
 </script>
