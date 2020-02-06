@@ -3,17 +3,21 @@
     <v-button @click="prevPage">
       <slot name="btn-prev-content" />
     </v-button>
-    <v-button @click="selectFirstPage(p)">{{ "1" }}</v-button>
-    <span>...</span>
+    <v-button v-if="showFirstNumber" @click="selectFirstPage(1)">
+      {{ "1" }}
+    </v-button>
+    <span v-if="showFirstNumber">...</span>
     <v-button
-      v-for="(p, i) in getTotal.total"
+      v-for="(p, i) in getVisibleNumbers"
       :key="i"
       :color="currPage === p ? 'primary' : null"
       @click="selectPage(p)"
       >{{ p }}</v-button
     >
-    <span>...</span>
-    <v-button @click="selectLastPage(p)">{{ total }}</v-button>
+    <span v-if="showLastNumber">...</span>
+    <v-button v-if="showLastNumber" @click="selectLastPage(total)">
+      {{ total }}
+    </v-button>
     <v-button @click="nextPage">
       <slot name="btn-next-content" />
     </v-button>
@@ -41,16 +45,33 @@ export default {
     }
   },
   computed: {
-    getTotal() {
-      return {
-        total: this.total < 5 ? this.total : 5,
-        hasMore: this.total >= 5
-      };
+    getVisibleNumbers() {
+      const numbers = [];
+      const middle = Math.ceil(this.total / 2);
+      if (this.currPage <= middle) {
+        for (let i = 1; i <= middle + 1; i++) {
+          numbers.push(i);
+        }
+      } else {
+        for (let i = middle; i <= this.total; i++) {
+          numbers.push(i);
+        }
+      }
+      return numbers;
+    },
+    showFirstNumber() {
+      return this.currPage > Math.ceil(this.total / 2);
+    },
+    showLastNumber() {
+      return this.currPage <= Math.ceil(this.total / 2);
     }
   },
   data() {
     return {
-      currPage: 1
+      currPage: 1,
+      maxVisible: 7,
+      showFirst: false,
+      showLast: false
     };
   },
   watch: {
@@ -81,8 +102,14 @@ export default {
         this.onChange();
       }
     },
-    selectFirstPage() {},
-    selectLastPage() {}
+    selectFirstPage(page) {
+      this.currPage = page;
+      this.onChange();
+    },
+    selectLastPage(page) {
+      this.currPage = page;
+      this.onChange();
+    }
   }
 };
 </script>
