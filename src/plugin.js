@@ -1,4 +1,5 @@
 import Button from "@/components/Buttons";
+import ButtonGroup from "@/components/Buttons/Group";
 import Badge from "@/components/Badges";
 import Card from "@/components/Cards";
 import Navbar from "@/components/Navbar";
@@ -27,6 +28,7 @@ export default {
   install(Vue) {
     // import components
     Vue.component(Button.name, Button);
+    Vue.component(ButtonGroup.name, ButtonGroup);
     Vue.component(LayoutAdmin.name, LayoutAdmin);
     Vue.component(LayoutCenter.name, LayoutCenter);
     Vue.component(Navbar.name, Navbar);
