@@ -1,6 +1,11 @@
 <template>
   <v-spacer margin="9">
-    <v-pagination :total="10" :selected="page" @change="onChangePagination">
+    <v-pagination
+      :total="15"
+      :visible="7"
+      :selected="page"
+      @change="onChangePagination"
+    >
       <template slot="btn-prev-content">
         <v-icon>fas fa-chevron-left</v-icon>
       </template>

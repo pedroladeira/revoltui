@@ -3,21 +3,15 @@
     <v-button @click="prevPage">
       <slot name="btn-prev-content" />
     </v-button>
-    <v-button v-if="showFirstNumber" @click="selectFirstPage(1)">
-      {{ "1" }}
-    </v-button>
-    <span v-if="showFirstNumber">...</span>
-    <v-button
-      v-for="(p, i) in getVisibleNumbers"
-      :key="i"
-      :color="currPage === p ? 'primary' : null"
-      @click="selectPage(p)"
-      >{{ p }}</v-button
-    >
-    <span v-if="showLastNumber">...</span>
-    <v-button v-if="showLastNumber" @click="selectLastPage(total)">
-      {{ total }}
-    </v-button>
+    <template v-for="(p, i) in getVisibleNumbers">
+      <v-button
+        v-if="p.val && !p.sep"
+        :key="i"
+        :color="currPage === p.val ? 'primary' : null"
+        @click="selectPage(p.val)"
+        >{{ p.val }}</v-button
+      >
+    </template>
     <v-button @click="nextPage">
       <slot name="btn-next-content" />
     </v-button>
@@ -38,6 +32,11 @@ export default {
       required: false,
       default: 1
     },
+    visible: {
+      type: Number,
+      required: false,
+      default: 7
+    },
     selected: {
       type: Number,
       required: false,
@@ -46,32 +45,35 @@ export default {
   },
   computed: {
     getVisibleNumbers() {
-      const numbers = [];
-      const middle = Math.ceil(this.total / 2);
-      if (this.currPage <= middle) {
-        for (let i = 1; i <= middle + 1; i++) {
-          numbers.push(i);
-        }
-      } else {
-        for (let i = middle; i <= this.total; i++) {
-          numbers.push(i);
-        }
+      const values = [];
+      let start = 1;
+      let end = this.visible;
+      if (this.currPage >= this.visible - 2) {
+        start = this.currPage - this.visible + 3;
       }
-      return numbers;
+      end = this.visible + start;
+      if (end > this.total) {
+        end = this.total + 1;
+        start = this.total - this.visible + 1;
+      }
+      for (let i = start; i < end; i++) {
+        values.push({
+          val: i
+        });
+      }
+      return values;
     },
-    showFirstNumber() {
-      return this.currPage > Math.ceil(this.total / 2);
+    isFirstSeparatorVisible() {
+      return this.currPage > 3;
     },
-    showLastNumber() {
-      return this.currPage <= Math.ceil(this.total / 2);
+    isLastSeparatorVisible() {
+      return this.currPage < this.total - 3;
     }
   },
   data() {
     return {
       currPage: 1,
-      maxVisible: 7,
-      showFirst: false,
-      showLast: false
+      maxVisible: 7
     };
   },
   watch: {
