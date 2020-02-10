@@ -12,6 +12,13 @@
         <slot v-if="hasTitleSlot" name="title"></slot>
         <h1 v-else>{{ title }}</h1>
       </div>
+      <div
+        class="v-navbar__action-icon"
+        v-if="actionIcon"
+        @click="onActionClick"
+      >
+        <i :class="actionIcon"></i>
+      </div>
       <slot></slot>
       <div class="flex flex-1">
         <div class="flex-1"></div>
@@ -24,7 +31,20 @@
 <script>
 export default {
   name: "v-navbar",
-  props: ["title", "link"],
+  props: {
+    title: {
+      type: String,
+      default: null
+    },
+    link: {
+      type: String,
+      default: null
+    },
+    actionIcon: {
+      type: String,
+      default: null
+    }
+  },
   computed: {
     hasTitleSlot() {
       return !!this.$slots["title"];
@@ -35,6 +55,9 @@ export default {
       if (this.link) {
         window.location.href = this.link;
       }
+    },
+    onActionClick() {
+      this.$emit("actionClick");
     }
   }
 };

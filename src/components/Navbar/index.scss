@@ -21,4 +21,13 @@
   .v-button-group {
     margin: 0.75rem 0;
   }
+
+  &__action-icon {
+    cursor: pointer;
+    line-height: var(--navbar-height);
+
+    &:hover {
+      color: var(--global-bg-color-primary);
+    }
+  }
 }

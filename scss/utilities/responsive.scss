@@ -15,6 +15,5 @@ $responsive-breakpoints: (xs: (screen: 576px, width: 100%),
     @media (min-width: map-get($size, 'screen')) {
       max-width: map-get($size, 'width');
     }
-
   }
 }
