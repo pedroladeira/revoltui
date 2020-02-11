@@ -1,5 +1,10 @@
 module.exports = {
-  outputDir: "docs",
+  outputDir: 'docs',
   indexPath: "index.html",
-  publicPath: ""
+  publicPath: '',
+
+  css: {
+    sourceMap: true,
+    extract: false
+  }
 };

@@ -21,8 +21,10 @@ import Notification from "@/components/Notifications";
 import Spacer from "@/components/Spacer";
 import Pagination from "@/components/Pagination";
 import Loading from "@/components/Loading";
-
 import Calendar from "@/components/Advanced/Calendar";
+
+// Import styles
+import "../scss/main.scss";
 
 export default {
   install(Vue) {
