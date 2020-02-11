@@ -11,9 +11,7 @@ Vue.use(Plugin);
 const req = require.context('../src', true, /stories.js$/);
 
 function loadStories() {
-  req.keys().forEach(req);
+	req.keys().forEach(req);
 }
 
 configure(loadStories, module);
-
-import "../scss/main.scss";
