@@ -27,33 +27,33 @@ import Calendar from "@/components/Advanced/Calendar";
 import "../scss/main.scss";
 
 export default {
-  install(Vue) {
-    // import components
-    Vue.component(Button.name, Button);
-    Vue.component(ButtonGroup.name, ButtonGroup);
-    Vue.component(LayoutAdmin.name, LayoutAdmin);
-    Vue.component(LayoutCenter.name, LayoutCenter);
-    Vue.component(Navbar.name, Navbar);
-    Vue.component(Card.name, Card);
-    Vue.component(Badge.name, Badge);
-    Vue.component(Menu.name, Menu);
-    Vue.component(MenuItem.name, MenuItem);
-    Vue.component(Icon.name, Icon);
-    Vue.component(Select.name, Select);
-    Vue.component(SelectItem.name, SelectItem);
-    Vue.component(Input.name, Input);
-    Vue.component(Table.name, Table);
-    Vue.component(TableRow.name, TableRow);
-    Vue.component(TableColumn.name, TableColumn);
-    Vue.component(Header.name, Header);
-    Vue.component(List.name, List);
-    Vue.component(ListItem.name, ListItem);
-    Vue.component(Dropdown.name, Dropdown);
-    Vue.component(Notification.name, Notification);
-    Vue.component(Spacer.name, Spacer);
-    Vue.component(Pagination.name, Pagination);
-    Vue.component(Loading.name, Loading);
-    // import advanced components
-    Vue.component(Calendar.name, Calendar);
-  }
+	install(Vue) {
+		// import components
+		Vue.component(Button.name, Button);
+		Vue.component(ButtonGroup.name, ButtonGroup);
+		Vue.component(LayoutAdmin.name, LayoutAdmin);
+		Vue.component(LayoutCenter.name, LayoutCenter);
+		Vue.component(Navbar.name, Navbar);
+		Vue.component(Card.name, Card);
+		Vue.component(Badge.name, Badge);
+		Vue.component(Menu.name, Menu);
+		Vue.component(MenuItem.name, MenuItem);
+		Vue.component(Icon.name, Icon);
+		Vue.component(Select.name, Select);
+		Vue.component(SelectItem.name, SelectItem);
+		Vue.component(Input.name, Input);
+		Vue.component(Table.name, Table);
+		Vue.component(TableRow.name, TableRow);
+		Vue.component(TableColumn.name, TableColumn);
+		Vue.component(Header.name, Header);
+		Vue.component(List.name, List);
+		Vue.component(ListItem.name, ListItem);
+		Vue.component(Dropdown.name, Dropdown);
+		Vue.component(Notification.name, Notification);
+		Vue.component(Spacer.name, Spacer);
+		Vue.component(Pagination.name, Pagination);
+		Vue.component(Loading.name, Loading);
+		// import advanced components
+		Vue.component(Calendar.name, Calendar);
+	}
 };
