@@ -28,7 +28,7 @@ export declare enum TxtHoverColor {
 export declare enum BgColor {
     default = "bg-white",
     primary = "bg-blue-900",
-    secondary = "bg-gray-900",
+    secondary = "bg-gray-800",
     warning = "",
     info = "",
     danger = "",
