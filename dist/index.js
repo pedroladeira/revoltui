@@ -119,6 +119,67 @@ var classnames = createCommonjsModule(function (module) {
 }());
 });
 
+var Colors;
+(function (Colors) {
+    Colors["default"] = "default";
+    Colors["primary"] = "primary";
+    Colors["secondary"] = "secondary";
+    Colors["warning"] = "warning";
+    Colors["info"] = "info";
+    Colors["danger"] = "danger";
+    Colors["success"] = "success";
+})(Colors || (Colors = {}));
+var TxtColor;
+(function (TxtColor) {
+    TxtColor["default"] = "text-gray-700";
+    TxtColor["primary"] = "";
+    TxtColor["secondary"] = "text-white";
+    TxtColor["warning"] = "";
+    TxtColor["info"] = "";
+    TxtColor["danger"] = "";
+    TxtColor["success"] = "";
+})(TxtColor || (TxtColor = {}));
+var TxtHoverColor;
+(function (TxtHoverColor) {
+    TxtHoverColor["default"] = "hover:text-gray-600";
+    TxtHoverColor["primary"] = "";
+    TxtHoverColor["secondary"] = "";
+    TxtHoverColor["warning"] = "";
+    TxtHoverColor["info"] = "";
+    TxtHoverColor["danger"] = "";
+    TxtHoverColor["success"] = "";
+})(TxtHoverColor || (TxtHoverColor = {}));
+var BgColor;
+(function (BgColor) {
+    BgColor["default"] = "bg-white";
+    BgColor["primary"] = "bg-blue-900";
+    BgColor["secondary"] = "bg-gray-900";
+    BgColor["warning"] = "";
+    BgColor["info"] = "";
+    BgColor["danger"] = "";
+    BgColor["success"] = "";
+})(BgColor || (BgColor = {}));
+var BgHoverColor;
+(function (BgHoverColor) {
+    BgHoverColor["default"] = "";
+    BgHoverColor["primary"] = "";
+    BgHoverColor["secondary"] = "hover:bg-gray-800";
+    BgHoverColor["warning"] = "";
+    BgHoverColor["info"] = "";
+    BgHoverColor["danger"] = "";
+    BgHoverColor["success"] = "";
+})(BgHoverColor || (BgHoverColor = {}));
+var BorderColor;
+(function (BorderColor) {
+    BorderColor["default"] = "border-gray-300";
+    BorderColor["primary"] = "";
+    BorderColor["secondary"] = "border-transparent";
+    BorderColor["warning"] = "";
+    BorderColor["info"] = "";
+    BorderColor["danger"] = "";
+    BorderColor["success"] = "";
+})(BorderColor || (BorderColor = {}));
+
 var RvButton = /** @class */ (function (_super) {
     __extends(RvButton, _super);
     function RvButton() {
@@ -126,18 +187,18 @@ var RvButton = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvButton.prototype, "mainClassNames", {
         get: function () {
-            return classnames([
+            var _a = this.props, size = _a.size, norounded = _a.norounded, color = _a.color;
+            return classnames({
+                'px-3 py-1 md:px-4 md:py-2 font-medium': !size || size === 'md',
+                'px-2 py-1 md:px-3 md:py-1': size === 'sm',
+                'px-4 py-2 md:px-8 md:py-3 font-bold': size === 'lg',
+                'rounded-md': !norounded
+            }, color ? BgColor[color] : BgColor.default, color ? BgHoverColor[color] : BgHoverColor.default, color ? TxtColor[color] : TxtColor.default, color ? TxtHoverColor[color] : TxtHoverColor.default, color ? BorderColor[color] : BorderColor.default, [
                 'flex',
                 'items-center',
                 'justify-center',
-                'px-1 py-1 md:py-2 md:px-5',
-                'border border-transparent',
-                'text-base',
-                'font-medium',
-                'rounded-md',
-                'text-white',
-                'bg-indigo-600 hover:bg-indigo-500',
-                'focus:outline-none focus:shadow-outline',
+                'border',
+                'focus:z-10 focus:outline-none',
                 'transition duration-150 ease-in-out'
             ]);
         },
@@ -149,6 +210,44 @@ var RvButton = /** @class */ (function (_super) {
         return (React__default.createElement("button", { type: "submit", className: this.mainClassNames, onClick: onClick }, children));
     };
     return RvButton;
+}(React.Component));
+
+var RvHeading = /** @class */ (function (_super) {
+    __extends(RvHeading, _super);
+    function RvHeading() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvHeading.prototype, "mainClassNames", {
+        get: function () {
+            var _a = this.props, h = _a.h, color = _a.color;
+            return classnames({
+                'text-3xl': !h || h === 1,
+                'text-2xl': h === 2,
+                'text-xl': h === 3,
+                'text-lg': h === 4,
+                'text-md': h === 5,
+                'text-sm': h === 6
+            }, color ? TxtColor[color] : 'text-gray-900', [
+                'font-semibold',
+                'leading-tight'
+            ]);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(RvHeading.prototype, "headerComponent", {
+        get: function () {
+            var _a = this.props, h = _a.h, children = _a.children;
+            var HeadComponent = "h" + (h || 1);
+            return (React__default.createElement(HeadComponent, { className: this.mainClassNames }, children));
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvHeading.prototype.render = function () {
+        return (React__default.createElement(React__default.Fragment, null, this.headerComponent));
+    };
+    return RvHeading;
 }(React.Component));
 
 var RvContainer = /** @class */ (function (_super) {
@@ -173,6 +272,54 @@ var RvContainer = /** @class */ (function (_super) {
     return RvContainer;
 }(React.Component));
 
+var RvNavbar = /** @class */ (function (_super) {
+    __extends(RvNavbar, _super);
+    function RvNavbar() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvNavbar.prototype, "mainClassNames", {
+        get: function () {
+            var color = this.props.color;
+            return classnames(color ? BgColor[color] : BgColor.default, color ? TxtColor[color] : TxtColor.default);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvNavbar.prototype.render = function () {
+        var _a = this.props, fluid = _a.fluid, children = _a.children;
+        return (React__default.createElement("nav", { className: this.mainClassNames },
+            React__default.createElement("div", { className: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
+                React__default.createElement(RvContainer, { center: !fluid },
+                    React__default.createElement("div", { className: "relative flex items-center justify-between h-16" }, children)))));
+    };
+    return RvNavbar;
+}(React.Component));
+
+var RvNavbarTitle = /** @class */ (function (_super) {
+    __extends(RvNavbarTitle, _super);
+    function RvNavbarTitle() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvNavbarTitle.prototype, "mainClassNames", {
+        get: function () {
+            return classnames('flex-1 flex items-center justify-center sm:items-stretch sm:justify-start');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvNavbarTitle.prototype.render = function () {
+        var children = this.props.children;
+        return (React__default.createElement("div", { className: this.mainClassNames },
+            React__default.createElement("div", { className: "flex-shrink-0" },
+                React__default.createElement("span", { className: "block lg:hidden h-8 w-auto" }, children),
+                React__default.createElement("span", { className: "hidden lg:block h-8 w-auto" }, children))));
+    };
+    return RvNavbarTitle;
+}(React.Component));
+
 exports.RvButton = RvButton;
 exports.RvContainer = RvContainer;
+exports.RvHeading = RvHeading;
+exports.RvNavbar = RvNavbar;
+exports.RvNavbarTitle = RvNavbarTitle;
 //# sourceMappingURL=index.js.map

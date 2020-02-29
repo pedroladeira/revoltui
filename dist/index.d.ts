@@ -1,3 +1,3 @@
 import './styles.css';
-export { RvButton } from './core/button';
+export * from './core';
 export { RvContainer } from './layout/container';
