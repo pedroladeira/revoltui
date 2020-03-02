@@ -9,7 +9,7 @@ export declare enum Colors {
 }
 export declare enum TxtColor {
     default = "text-gray-700",
-    primary = "",
+    primary = "text-white",
     secondary = "text-white",
     warning = "",
     info = "",
@@ -27,7 +27,7 @@ export declare enum TxtHoverColor {
 }
 export declare enum BgColor {
     default = "bg-white",
-    primary = "bg-blue-900",
+    primary = "bg-blue-600",
     secondary = "bg-gray-800",
     warning = "",
     info = "",

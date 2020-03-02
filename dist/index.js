@@ -132,7 +132,7 @@ var Colors;
 var TxtColor;
 (function (TxtColor) {
     TxtColor["default"] = "text-gray-700";
-    TxtColor["primary"] = "";
+    TxtColor["primary"] = "text-white";
     TxtColor["secondary"] = "text-white";
     TxtColor["warning"] = "";
     TxtColor["info"] = "";
@@ -152,7 +152,7 @@ var TxtHoverColor;
 var BgColor;
 (function (BgColor) {
     BgColor["default"] = "bg-white";
-    BgColor["primary"] = "bg-blue-900";
+    BgColor["primary"] = "bg-blue-600";
     BgColor["secondary"] = "bg-gray-800";
     BgColor["warning"] = "";
     BgColor["info"] = "";
@@ -253,6 +253,27 @@ var RvHeading = /** @class */ (function (_super) {
 }(React.Component));
 //# sourceMappingURL=index.js.map
 
+var RvNavbar = /** @class */ (function (_super) {
+    __extends(RvNavbar, _super);
+    function RvNavbar() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvNavbar.prototype, "mainClassNames", {
+        get: function () {
+            var color = this.props.color;
+            return classnames(color ? BgColor[color] : BgColor.default, color ? TxtColor[color] : TxtColor.default);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvNavbar.prototype.render = function () {
+        var children = this.props.children;
+        return (React__default.createElement("nav", { className: this.mainClassNames }, children));
+    };
+    return RvNavbar;
+}(React.Component));
+//# sourceMappingURL=RvNavbar.js.map
+
 var RvContainer = /** @class */ (function (_super) {
     __extends(RvContainer, _super);
     function RvContainer() {
@@ -276,29 +297,27 @@ var RvContainer = /** @class */ (function (_super) {
 }(React.Component));
 //# sourceMappingURL=index.js.map
 
-var RvNavbar = /** @class */ (function (_super) {
-    __extends(RvNavbar, _super);
-    function RvNavbar() {
+var RvNavbarContainer = /** @class */ (function (_super) {
+    __extends(RvNavbarContainer, _super);
+    function RvNavbarContainer() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Object.defineProperty(RvNavbar.prototype, "mainClassNames", {
+    Object.defineProperty(RvNavbarContainer.prototype, "mainClassNames", {
         get: function () {
-            var color = this.props.color;
-            return classnames(color ? BgColor[color] : BgColor.default, color ? TxtColor[color] : TxtColor.default);
+            return classnames('max-w-7xl mx-auto px-2 sm:px-6 lg:px-8');
         },
         enumerable: true,
         configurable: true
     });
-    RvNavbar.prototype.render = function () {
+    RvNavbarContainer.prototype.render = function () {
         var _a = this.props, fluid = _a.fluid, children = _a.children;
-        return (React__default.createElement("nav", { className: this.mainClassNames },
-            React__default.createElement("div", { className: "max-w-7xl mx-auto px-2 sm:px-6 lg:px-8" },
-                React__default.createElement(RvContainer, { center: !fluid },
-                    React__default.createElement("div", { className: "relative flex items-center justify-between h-16" }, children)))));
+        return (React__default.createElement("div", { className: this.mainClassNames },
+            React__default.createElement(RvContainer, { center: !fluid },
+                React__default.createElement("div", { className: "relative flex items-center justify-between h-16" }, children))));
     };
-    return RvNavbar;
+    return RvNavbarContainer;
 }(React.Component));
-//# sourceMappingURL=RvNavbar.js.map
+//# sourceMappingURL=RvNavbarContainer.js.map
 
 var RvNavbarTitle = /** @class */ (function (_super) {
     __extends(RvNavbarTitle, _super);
@@ -330,9 +349,12 @@ var RvMenu = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvMenu.prototype, "mainClassNames", {
         get: function () {
+            var vertical = this.props.vertical;
             return classnames([
                 'flex items-baseline'
-            ]);
+            ], {
+                'flex-wrap px-1 pt-2 pb-3': vertical
+            });
         },
         enumerable: true,
         configurable: true
@@ -352,7 +374,7 @@ var RvMenuItem = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvMenuItem.prototype, "mainClassNames", {
         get: function () {
-            var active = this.props.active;
+            var _a = this.props, active = _a.active, vertical = _a.vertical;
             return classnames([
                 'mx-1 px-3 py-2',
                 'rounded-md',
@@ -362,7 +384,8 @@ var RvMenuItem = /** @class */ (function (_super) {
                 'focus:outline-none focus:text-white focus:bg-gray-700',
             ], {
                 'text-white bg-gray-900': active,
-                'text-gray-300': !active
+                'text-gray-300': !active,
+                'w-full mt-1': vertical
             });
         },
         enumerable: true,
@@ -382,5 +405,6 @@ exports.RvHeading = RvHeading;
 exports.RvMenu = RvMenu;
 exports.RvMenuItem = RvMenuItem;
 exports.RvNavbar = RvNavbar;
+exports.RvNavbarContainer = RvNavbarContainer;
 exports.RvNavbarTitle = RvNavbarTitle;
 //# sourceMappingURL=index.js.map

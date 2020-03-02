@@ -1,10 +1,9 @@
 import { Component, ReactNode } from 'react';
 interface IProps {
-    url?: string;
-    active?: boolean;
-    vertical?: boolean;
+    title?: string | ReactNode;
+    fluid?: boolean;
 }
-export declare class RvMenuItem extends Component<IProps> {
+export declare class RvNavbarContainer extends Component<IProps> {
     get mainClassNames(): string;
     render(): ReactNode;
 }
