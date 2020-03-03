@@ -22,7 +22,9 @@
 		"react": "^15.0.0 || ^16.0.0",
 		"react-dom": "^15.0.0 || ^16.0.0"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.12.1"
+	},
 	"devDependencies": {
 		"@svgr/rollup": "^5.2.0",
 		"@types/classnames": "^2.2.9",
