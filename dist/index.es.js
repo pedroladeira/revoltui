@@ -267,6 +267,7 @@ var RvNavbar = /** @class */ (function (_super) {
     };
     return RvNavbar;
 }(Component));
+//# sourceMappingURL=RvNavbar.js.map
 
 var RvContainer = /** @class */ (function (_super) {
     __extends(RvContainer, _super);
@@ -393,6 +394,64 @@ var RvMenuItem = /** @class */ (function (_super) {
 }(Component));
 //# sourceMappingURL=RvMenuItem.js.map
 
+var RvInput = /** @class */ (function (_super) {
+    __extends(RvInput, _super);
+    function RvInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvInput.prototype, "mainClassNames", {
+        get: function () {
+            var norounded = this.props.norounded;
+            return classnames([
+                'appearance-none relative block w-full',
+                'px-3 py-2',
+                'border border-gray-300',
+                'placeholder-gray-500 text-gray-900 sm:text-sm sm:leading-5',
+                'focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10'
+            ], {
+                'rounded-md ': !norounded
+            });
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvInput.prototype.render = function () {
+        var _a = this.props, type = _a.type, value = _a.value, onChange = _a.onChange, placeholder = _a.placeholder;
+        return (React.createElement(React.Fragment, null, type === 'textarea' ? React.createElement("textarea", { className: this.mainClassNames, value: value, onChange: onChange, placeholder: placeholder })
+            :
+                React.createElement("input", { type: type, className: this.mainClassNames, onChange: onChange, placeholder: placeholder })));
+    };
+    RvInput.defaultProps = {
+        type: 'text'
+    };
+    return RvInput;
+}(Component));
+
+var RvFormInput = /** @class */ (function (_super) {
+    __extends(RvFormInput, _super);
+    function RvFormInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvFormInput.prototype, "mainClassNames", {
+        get: function () {
+            return classnames([
+                'w-full'
+            ]);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvFormInput.prototype.render = function () {
+        var _a = this.props, title = _a.title, children = _a.children;
+        return (React.createElement("div", { className: this.mainClassNames },
+            title &&
+                React.createElement("label", { className: "block text-sm leading-5 font-medium text-gray-700 mb-1" }, title),
+            children));
+    };
+    return RvFormInput;
+}(Component));
+//# sourceMappingURL=RvFormInput.js.map
+
 var RvLayoutFull = /** @class */ (function (_super) {
     __extends(RvLayoutFull, _super);
     function RvLayoutFull() {
@@ -450,5 +509,5 @@ var RvLayoutSplit = /** @class */ (function (_super) {
 }(Component));
 //# sourceMappingURL=index.js.map
 
-export { RvButton, RvContainer, RvHeading, RvLayoutFull, RvLayoutSplit, RvMenu, RvMenuItem, RvNavbar, RvNavbarContainer, RvNavbarTitle };
+export { RvButton, RvContainer, RvFormInput, RvHeading, RvInput, RvLayoutFull, RvLayoutSplit, RvMenu, RvMenuItem, RvNavbar, RvNavbarContainer, RvNavbarTitle };
 //# sourceMappingURL=index.es.js.map
