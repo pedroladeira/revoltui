@@ -515,6 +515,26 @@ var RvDropdownItem = /** @class */ (function (_super) {
 }(Component));
 //# sourceMappingURL=RvDropdownItem.js.map
 
+var RvDropdownSeparator = /** @class */ (function (_super) {
+    __extends(RvDropdownSeparator, _super);
+    function RvDropdownSeparator() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvDropdownSeparator.prototype, "mainClassNames", {
+        get: function () {
+            return classnames([
+                'border-t border-gray-200'
+            ]);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvDropdownSeparator.prototype.render = function () {
+        return (React.createElement("div", { className: this.mainClassNames }));
+    };
+    return RvDropdownSeparator;
+}(Component));
+
 var css$1 = "@import \"@fortawesome/fontawesome-free/css/all.css\";\n";
 styleInject(css$1);
 
@@ -5052,5 +5072,5 @@ var RvLayoutSplit = /** @class */ (function (_super) {
 }(Component));
 //# sourceMappingURL=index.js.map
 
-export { RvButton, RvCard, RvCardBody, RvCardHeader, RvContainer, RvDropdown, RvDropdownItem, RvFormInput, RvHeading, RvIcon, RvInput, RvLayoutFull, RvLayoutSplit, RvMenu, RvMenuItem, RvNavbar, RvNavbarContainer, RvNavbarTitle };
+export { RvButton, RvCard, RvCardBody, RvCardHeader, RvContainer, RvDropdown, RvDropdownItem, RvDropdownSeparator, RvFormInput, RvHeading, RvIcon, RvInput, RvLayoutFull, RvLayoutSplit, RvMenu, RvMenuItem, RvNavbar, RvNavbarContainer, RvNavbarTitle };
 //# sourceMappingURL=index.es.js.map
