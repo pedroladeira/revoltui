@@ -5,15 +5,17 @@ import { Colors, TxtColor, BgColor } from '../../theme';
 interface IProps {
 	title?: string | ReactNode;
 	color?: Colors;
-	fluid?: boolean;
+	noshadow?: boolean;
 }
 
 export class RvNavbar extends Component<IProps> {
 
 	get mainClassNames(): string {
-		const { color } = this.props;
+		const { color, noshadow } = this.props;
 
-		return classNames(
+		return classNames({
+			'shadow': !noshadow
+		},
 			color ? BgColor[color] : BgColor.default,
 			color ? TxtColor[color] : TxtColor.default
 		);

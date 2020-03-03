@@ -1,11 +1,9 @@
 import { Component, ReactNode } from 'react';
 import { Colors } from '../../theme';
 interface IProps {
-    title?: string | ReactNode;
     color?: Colors;
-    noshadow?: boolean;
 }
-export declare class RvNavbar extends Component<IProps> {
+export declare class RvLayoutSidebar extends Component<IProps> {
     get mainClassNames(): string;
     render(): ReactNode;
 }

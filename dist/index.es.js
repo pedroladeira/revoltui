@@ -253,8 +253,10 @@ var RvNavbar = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvNavbar.prototype, "mainClassNames", {
         get: function () {
-            var color = this.props.color;
-            return classnames(color ? BgColor[color] : BgColor.default, color ? TxtColor[color] : TxtColor.default);
+            var _a = this.props, color = _a.color, noshadow = _a.noshadow;
+            return classnames({
+                'shadow': !noshadow
+            }, color ? BgColor[color] : BgColor.default, color ? TxtColor[color] : TxtColor.default);
         },
         enumerable: true,
         configurable: true
@@ -265,7 +267,6 @@ var RvNavbar = /** @class */ (function (_super) {
     };
     return RvNavbar;
 }(Component));
-//# sourceMappingURL=RvNavbar.js.map
 
 var RvContainer = /** @class */ (function (_super) {
     __extends(RvContainer, _super);
@@ -392,5 +393,62 @@ var RvMenuItem = /** @class */ (function (_super) {
 }(Component));
 //# sourceMappingURL=RvMenuItem.js.map
 
-export { RvButton, RvContainer, RvHeading, RvMenu, RvMenuItem, RvNavbar, RvNavbarContainer, RvNavbarTitle };
+var RvLayoutFull = /** @class */ (function (_super) {
+    __extends(RvLayoutFull, _super);
+    function RvLayoutFull() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvLayoutFull.prototype, "mainClassNames", {
+        get: function () {
+            return classnames([
+                'w-full h-screen overflow-hidden'
+            ]);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvLayoutFull.prototype.render = function () {
+        var children = this.props.children;
+        return (React.createElement("div", { className: this.mainClassNames }, children));
+    };
+    return RvLayoutFull;
+}(Component));
+//# sourceMappingURL=index.js.map
+
+var RvLayoutSplit = /** @class */ (function (_super) {
+    __extends(RvLayoutSplit, _super);
+    function RvLayoutSplit() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvLayoutSplit.prototype, "mainClassNames", {
+        get: function () {
+            return classnames([
+                'flex h-full'
+            ]);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(RvLayoutSplit.prototype, "leftClassNames", {
+        get: function () {
+            var color = this.props.color;
+            return classnames([
+                'w-64 hidden sm:block overflow-scroll'
+            ], color ? BgColor[color] : BgColor.default);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvLayoutSplit.prototype.render = function () {
+        var _a = this.props, left = _a.left, children = _a.children;
+        return (React.createElement("div", { className: this.mainClassNames },
+            left &&
+                React.createElement("div", { className: this.leftClassNames }, left),
+            React.createElement("div", { className: "flex-1 overflow-scroll" }, children)));
+    };
+    return RvLayoutSplit;
+}(Component));
+//# sourceMappingURL=index.js.map
+
+export { RvButton, RvContainer, RvHeading, RvLayoutFull, RvLayoutSplit, RvMenu, RvMenuItem, RvNavbar, RvNavbarContainer, RvNavbarTitle };
 //# sourceMappingURL=index.es.js.map
