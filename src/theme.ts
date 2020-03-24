@@ -13,9 +13,9 @@ export enum TxtColor {
 	primary = 'text-white',
 	secondary = 'text-white',
 	warning = '',
-	info = '',
-	danger = '',
-	success = ''
+	info = 'text-gray-700',
+	danger = 'text-white',
+	success = 'text-white'
 }
 
 export enum TxtHoverColor {
@@ -33,9 +33,9 @@ export enum BgColor {
 	primary = 'bg-blue-600',
 	secondary = 'bg-gray-800',
 	warning = '',
-	info = '',
-	danger = '',
-	success = ''
+	info = 'bg-blue-300',
+	danger = 'bg-red-600',
+	success = 'bg-green-600'
 }
 
 export enum BgHoverColor {

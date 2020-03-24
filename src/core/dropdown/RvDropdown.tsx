@@ -1,7 +1,6 @@
 import React, { Component, ReactNode, Children } from 'react';
 import classNames from 'classnames';
 import { HTMLBasicElementProps } from '../../utils/ElementProps';
-// import { Colors, TxtColor } from '../../theme';
 
 interface IProps extends HTMLBasicElementProps {
 	toggle: ReactNode;

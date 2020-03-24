@@ -20,5 +20,11 @@
 		"allowSyntheticDefaultImports": true
 	},
 	"include": ["src"],
-	"exclude": ["node_modules", "build", "dist", "documentation", "rollup.config.js"]
+	"exclude": [
+		"node_modules",
+		"build",
+		"dist",
+		"docs",
+		"configs"
+	]
 }

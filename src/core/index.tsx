@@ -8,3 +8,4 @@ export * from './icon';
 export * from './card';
 export * from './table';
 export * from './pagination';
+export * from './breadcrumbs';
