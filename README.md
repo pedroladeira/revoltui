@@ -1,6 +1,6 @@
 # RevoltUI
 
-React UI framework based in tailwindcss gramework.
+React UI framework based in tailwindcss Framework.
 You can check [documentation](https://revoltui.now.sh/)
 
 ## Add RevoltUI to your project
@@ -18,11 +18,7 @@ yarn add revoltui
 ### Include RevoltUI in your project
 
 ```javascript
-import Vue from 'vue';
 import RevoltUI from 'revoltui';
-import 'revoltui/scss/main.scss';
-
-Vue.use(RevoltUI);
 ```
 
 
