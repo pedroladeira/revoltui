@@ -10,7 +10,8 @@
 		"prepare": "npm run build",
 		"predeploy": "cd documentation && npm install && npm run build",
 		"deploy": "gh-pages -d documentation/build",
-		"storybook": "start-storybook"
+		"storybook": "start-storybook",
+		"storybook:build": "build-storybook -o docs"
 	},
 	"main": "dist/index.js",
 	"module": "dist/index.es.js",
