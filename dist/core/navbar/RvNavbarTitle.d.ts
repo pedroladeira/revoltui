@@ -1,5 +1,6 @@
 import { Component, ReactNode } from 'react';
-export declare class RvNavbarTitle extends Component {
+import { HTMLBasicElementProps } from '../../utils/ElementProps';
+export declare class RvNavbarTitle extends Component<{} & HTMLBasicElementProps> {
     get mainClassNames(): string;
     render(): ReactNode;
 }

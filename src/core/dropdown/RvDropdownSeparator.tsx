@@ -1,10 +1,13 @@
 import React, { Component, ReactNode } from 'react';
 import classNames from 'classnames';
+import { HTMLBasicElementProps } from '../../utils/ElementProps';
 
-export class RvDropdownSeparator extends Component {
+export class RvDropdownSeparator extends Component<{} & HTMLBasicElementProps> {
 
 	get mainClassNames(): string {
-		return classNames([
+		const { className } = this.props;
+
+		return classNames(className, [
 			'border-t border-gray-200'
 		]);
 	}

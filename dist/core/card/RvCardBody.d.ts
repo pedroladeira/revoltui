@@ -1,5 +1,6 @@
 import { Component, ReactNode } from 'react';
-export declare class RvCardBody extends Component<{}> {
+import { HTMLBasicElementProps } from '../../utils/ElementProps';
+export declare class RvCardBody extends Component<{} & HTMLBasicElementProps> {
     get mainClassNames(): string;
     render(): ReactNode;
 }

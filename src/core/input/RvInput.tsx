@@ -1,27 +1,18 @@
-import React, { Component, ReactNode } from 'react';
+import React, { FC } from 'react';
 import classNames from 'classnames';
 
-interface IDefaultProps {
-	type: 'text' | 'number' | 'textarea' | 'email';
+interface IProps extends React.InputHTMLAttributes<HTMLInputElement> {
+	norounded?: boolean;
 }
 
-interface IProps extends IDefaultProps {
-	value?: string | number;
-	size?: 'sm' | 'md' | 'lg';
-	norounded?: boolean,
-	placeholder?: string;
-	onChange?(event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void;
-}
+export const RvInput: FC<IProps> = ({
+	className,
+	norounded,
+	...otherProps
+}: IProps) => {
 
-export class RvInput extends Component<IProps> {
-	static defaultProps: IDefaultProps = {
-		type: 'text'
-	}
-
-	get mainClassNames(): string {
-		const { norounded } = this.props;
-
-		return classNames([
+	const mainClassNames = (): string => {
+		return classNames(className, [
 			'appearance-none relative block w-full',
 			'px-3 py-2',
 			'border border-gray-300',
@@ -30,21 +21,9 @@ export class RvInput extends Component<IProps> {
 		], {
 			'rounded-md ': !norounded
 		});
-	}
+	};
 
-	render(): ReactNode {
-		const { type, value, onChange, placeholder } = this.props;
-		return (<>
-			{type === 'textarea' ? <textarea className={this.mainClassNames}
-				value={value}
-				onChange={onChange}
-				placeholder={placeholder}></textarea>
-				:
-				<input type={type}
-					className={this.mainClassNames}
-					onChange={onChange}
-					placeholder={placeholder} />
-			}
-		</>)
-	}
-}
+	return (<>
+		<input className={mainClassNames()} {...otherProps} />
+	</>);
+};

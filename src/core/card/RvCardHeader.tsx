@@ -1,10 +1,13 @@
 import React, { Component, ReactNode } from 'react';
 import classNames from 'classnames';
+import { HTMLBasicElementProps } from '../../utils/ElementProps';
 
-export class RvCardHeader extends Component<{}> {
+export class RvCardHeader extends Component<{} & HTMLBasicElementProps> {
 
 	get mainClassNames(): string {
-		return classNames([
+		const { className } = this.props;
+
+		return classNames(className, [
 			'px-4 py-5 border-b border-gray-200 sm:px-6'
 		]);
 	}

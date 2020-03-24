@@ -1,6 +1,6 @@
 # RevoltUI
 
-UI framework based in VueJS.
+React UI framework based in tailwindcss gramework.
 You can check [documentation](https://revoltui.now.sh/)
 
 ## Add RevoltUI to your project

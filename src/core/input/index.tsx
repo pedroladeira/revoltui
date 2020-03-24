@@ -1,2 +1,3 @@
 export * from './RvInput';
-export * from './RvFormInput';
+export * from './RvInputControl';
+export * from './RvInputLabel';

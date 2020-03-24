@@ -35,7 +35,7 @@ export declare enum BgColor {
     success = ""
 }
 export declare enum BgHoverColor {
-    default = "",
+    default = "hover:bg-gray-200",
     primary = "",
     secondary = "hover:bg-gray-800",
     warning = "",

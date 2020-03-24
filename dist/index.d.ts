@@ -3,3 +3,4 @@ export * from './core';
 export { RvContainer } from './layout/container';
 export { RvLayoutFull } from './layout/full';
 export { RvLayoutSplit } from './layout/split';
+export { Colors as ThemeColors } from './theme';

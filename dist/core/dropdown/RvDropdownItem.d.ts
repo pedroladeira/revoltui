@@ -1,7 +1,7 @@
 import { Component, ReactNode } from 'react';
-interface IProps {
-    title: string;
-    href: string;
+import { HTMLBasicElementProps } from '../../utils/ElementProps';
+interface IProps extends HTMLBasicElementProps {
+    onClick?(): void;
 }
 export declare class RvDropdownItem extends Component<IProps> {
     get mainClassNames(): string;

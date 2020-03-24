@@ -1,8 +1,9 @@
 import React, { Component, ReactNode } from 'react';
 import classNames from 'classnames';
 import { RvContainer } from '../../layout/container';
+import { HTMLBasicElementProps } from '../../utils/ElementProps';
 
-interface IProps {
+interface IProps extends HTMLBasicElementProps {
 	title?: string | ReactNode;
 	fluid?: boolean;
 }
@@ -10,7 +11,9 @@ interface IProps {
 export class RvNavbarContainer extends Component<IProps> {
 
 	get mainClassNames(): string {
-		return classNames('max-w-7xl mx-auto px-2 sm:px-6 lg:px-8');
+		const { className } = this.props;
+
+		return classNames(className, 'max-w-7xl mx-auto px-2 sm:px-6 lg:px-8');
 	}
 
 	render(): ReactNode {

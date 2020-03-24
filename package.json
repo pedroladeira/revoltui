@@ -1,6 +1,6 @@
 {
 	"name": "revoltui",
-	"version": "0.1.27-alpha",
+	"version": "0.2.501-alpha",
 	"scripts": {
 		"test": "cross-env CI=1 react-scripts-ts test --env=jsdom",
 		"test:watch": "react-scripts-ts test --env=jsdom",

@@ -1,19 +1,20 @@
 import React, { Component, ReactNode } from 'react';
 import classNames from 'classnames';
-import { Colors, TxtColor, BgColor } from '../../theme';
+import { Colors as ThemeColors, TxtColor, BgColor } from '../../theme';
+import { HTMLBasicElementProps } from '../../utils/ElementProps';
 
-interface IProps {
+interface IProps extends HTMLBasicElementProps {
 	title?: string | ReactNode;
-	color?: Colors;
+	color?: ThemeColors;
 	noshadow?: boolean;
 }
 
 export class RvNavbar extends Component<IProps> {
 
 	get mainClassNames(): string {
-		const { color, noshadow } = this.props;
+		const { color, noshadow, className } = this.props;
 
-		return classNames({
+		return classNames(className, {
 			'shadow': !noshadow
 		},
 			color ? BgColor[color] : BgColor.default,

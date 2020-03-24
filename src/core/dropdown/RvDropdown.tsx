@@ -1,8 +1,9 @@
 import React, { Component, ReactNode, Children } from 'react';
 import classNames from 'classnames';
+import { HTMLBasicElementProps } from '../../utils/ElementProps';
 // import { Colors, TxtColor } from '../../theme';
 
-interface IProps {
+interface IProps extends HTMLBasicElementProps {
 	toggle: ReactNode;
 	open: boolean;
 }
@@ -10,11 +11,9 @@ interface IProps {
 export class RvDropdown extends Component<IProps> {
 
 	get mainClassNames(): string {
-		const { } = this.props;
+		const { className } = this.props;
 
-		return classNames([
-			''
-		]);
+		return classNames(className);
 	}
 
 	get itemsClassNames(): string {

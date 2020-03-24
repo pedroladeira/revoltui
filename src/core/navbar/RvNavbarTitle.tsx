@@ -1,10 +1,13 @@
 import React, { Component, ReactNode } from 'react';
 import classNames from 'classnames';
+import { HTMLBasicElementProps } from '../../utils/ElementProps';
 
-export class RvNavbarTitle extends Component {
+export class RvNavbarTitle extends Component<{} & HTMLBasicElementProps> {
 
 	get mainClassNames(): string {
-		return classNames('flex-1 flex items-center justify-center sm:items-stretch sm:justify-start');
+		const { className } = this.props;
+
+		return classNames(className, 'flex-1 flex items-center justify-center sm:items-stretch sm:justify-start');
 	}
 
 	render(): ReactNode {

@@ -1,5 +1,6 @@
 import { Component, ReactNode } from 'react';
-interface IProps {
+import { HTMLBasicElementProps } from '../../utils/ElementProps';
+interface IProps extends HTMLBasicElementProps {
     toggle: ReactNode;
     open: boolean;
 }

@@ -59,6 +59,29 @@ function __extends(d, b) {
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 }
 
+var __assign = function() {
+    __assign = Object.assign || function __assign(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
+
+function __rest(s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+}
+
 var commonjsGlobal = typeof globalThis !== 'undefined' ? globalThis : typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
 
 function createCommonjsModule(fn, module) {
@@ -156,7 +179,7 @@ var BgColor;
 })(BgColor || (BgColor = {}));
 var BgHoverColor;
 (function (BgHoverColor) {
-    BgHoverColor["default"] = "";
+    BgHoverColor["default"] = "hover:bg-gray-200";
     BgHoverColor["primary"] = "";
     BgHoverColor["secondary"] = "hover:bg-gray-800";
     BgHoverColor["warning"] = "";
@@ -183,8 +206,8 @@ var RvButton = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvButton.prototype, "mainClassNames", {
         get: function () {
-            var _a = this.props, size = _a.size, norounded = _a.norounded, color = _a.color;
-            return classnames({
+            var _a = this.props, size = _a.size, norounded = _a.norounded, color = _a.color, className = _a.className;
+            return classnames(className, {
                 'px-3 py-1 md:px-4 md:py-2 font-medium': !size || size === 'md',
                 'px-2 py-1 md:px-3 md:py-1': size === 'sm',
                 'px-4 py-2 md:px-8 md:py-3 font-bold': size === 'lg',
@@ -207,7 +230,7 @@ var RvButton = /** @class */ (function (_super) {
     };
     return RvButton;
 }(Component));
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=RvButton.js.map
 
 var RvHeading = /** @class */ (function (_super) {
     __extends(RvHeading, _super);
@@ -216,8 +239,8 @@ var RvHeading = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvHeading.prototype, "mainClassNames", {
         get: function () {
-            var _a = this.props, h = _a.h, color = _a.color;
-            return classnames({
+            var _a = this.props, h = _a.h, color = _a.color, className = _a.className;
+            return classnames(className, {
                 'text-3xl': !h || h === 1,
                 'text-2xl': h === 2,
                 'text-xl': h === 3,
@@ -246,7 +269,7 @@ var RvHeading = /** @class */ (function (_super) {
     };
     return RvHeading;
 }(Component));
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=RvHeading.js.map
 
 var RvNavbar = /** @class */ (function (_super) {
     __extends(RvNavbar, _super);
@@ -255,8 +278,8 @@ var RvNavbar = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvNavbar.prototype, "mainClassNames", {
         get: function () {
-            var _a = this.props, color = _a.color, noshadow = _a.noshadow;
-            return classnames({
+            var _a = this.props, color = _a.color, noshadow = _a.noshadow, className = _a.className;
+            return classnames(className, {
                 'shadow': !noshadow
             }, color ? BgColor[color] : BgColor.default, color ? TxtColor[color] : TxtColor.default);
         },
@@ -278,8 +301,8 @@ var RvContainer = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvContainer.prototype, "mainClassNames", {
         get: function () {
-            var center = this.props.center;
-            return classnames('container', {
+            var _a = this.props, center = _a.center, className = _a.className;
+            return classnames(className, 'container', {
                 'mx-auto': center
             });
         },
@@ -292,7 +315,7 @@ var RvContainer = /** @class */ (function (_super) {
     };
     return RvContainer;
 }(Component));
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=RvContainer.js.map
 
 var RvNavbarContainer = /** @class */ (function (_super) {
     __extends(RvNavbarContainer, _super);
@@ -301,7 +324,8 @@ var RvNavbarContainer = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvNavbarContainer.prototype, "mainClassNames", {
         get: function () {
-            return classnames('max-w-7xl mx-auto px-2 sm:px-6 lg:px-8');
+            var className = this.props.className;
+            return classnames(className, 'max-w-7xl mx-auto px-2 sm:px-6 lg:px-8');
         },
         enumerable: true,
         configurable: true
@@ -323,7 +347,8 @@ var RvNavbarTitle = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvNavbarTitle.prototype, "mainClassNames", {
         get: function () {
-            return classnames('flex-1 flex items-center justify-center sm:items-stretch sm:justify-start');
+            var className = this.props.className;
+            return classnames(className, 'flex-1 flex items-center justify-center sm:items-stretch sm:justify-start');
         },
         enumerable: true,
         configurable: true
@@ -346,8 +371,8 @@ var RvMenu = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvMenu.prototype, "mainClassNames", {
         get: function () {
-            var vertical = this.props.vertical;
-            return classnames([
+            var _a = this.props, vertical = _a.vertical, className = _a.className;
+            return classnames(className, [
                 'flex items-baseline'
             ], {
                 'flex-wrap px-1 pt-2 pb-3': vertical
@@ -371,17 +396,15 @@ var RvMenuItem = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvMenuItem.prototype, "mainClassNames", {
         get: function () {
-            var _a = this.props, active = _a.active, vertical = _a.vertical;
-            return classnames([
+            var _a = this.props, active = _a.active, vertical = _a.vertical, className = _a.className;
+            return classnames(className, [
                 'mx-1 px-3 py-2',
                 'rounded-md',
                 'cursor-pointer',
-                'text-sm font-medium ',
-                'hover:text-white hover:bg-gray-700',
+                'text-sm font-medium',
                 'focus:outline-none focus:text-white focus:bg-gray-700',
             ], {
                 'text-white bg-gray-900': active,
-                'text-gray-300': !active,
                 'w-full mt-1': vertical
             });
         },
@@ -389,71 +412,79 @@ var RvMenuItem = /** @class */ (function (_super) {
         configurable: true
     });
     RvMenuItem.prototype.render = function () {
-        var _a = this.props, url = _a.url, children = _a.children;
-        return (React.createElement("a", { className: this.mainClassNames, href: url }, children));
+        var _a = this.props, url = _a.url, children = _a.children, onClick = _a.onClick;
+        return (React.createElement(React.Fragment, null, url ? React.createElement("a", { onClick: onClick, className: this.mainClassNames, href: url }, children)
+            : React.createElement("span", { onClick: onClick, className: this.mainClassNames }, children)));
     };
     return RvMenuItem;
 }(Component));
 //# sourceMappingURL=RvMenuItem.js.map
 
-var RvInput = /** @class */ (function (_super) {
-    __extends(RvInput, _super);
-    function RvInput() {
+var RvInput = function (_a) {
+    var className = _a.className, norounded = _a.norounded, otherProps = __rest(_a, ["className", "norounded"]);
+    var mainClassNames = function () {
+        return classnames(className, [
+            'appearance-none relative block w-full',
+            'px-3 py-2',
+            'border border-gray-300',
+            'placeholder-gray-500 text-gray-900 sm:text-sm sm:leading-5',
+            'focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10'
+        ], {
+            'rounded-md ': !norounded
+        });
+    };
+    return (React.createElement(React.Fragment, null,
+        React.createElement("input", __assign({ className: mainClassNames() }, otherProps))));
+};
+//# sourceMappingURL=RvInput.js.map
+
+var RvInputLabel = /** @class */ (function (_super) {
+    __extends(RvInputLabel, _super);
+    function RvInputLabel() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Object.defineProperty(RvInput.prototype, "mainClassNames", {
+    Object.defineProperty(RvInputLabel.prototype, "mainClassNames", {
         get: function () {
-            var norounded = this.props.norounded;
-            return classnames([
-                'appearance-none relative block w-full',
-                'px-3 py-2',
-                'border border-gray-300',
-                'placeholder-gray-500 text-gray-900 sm:text-sm sm:leading-5',
-                'focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:z-10'
-            ], {
-                'rounded-md ': !norounded
-            });
+            var className = this.props.className;
+            return classnames(className, [
+                'block text-sm leading-5 font-medium text-gray-700 mb-1'
+            ]);
         },
         enumerable: true,
         configurable: true
     });
-    RvInput.prototype.render = function () {
-        var _a = this.props, type = _a.type, value = _a.value, onChange = _a.onChange, placeholder = _a.placeholder;
-        return (React.createElement(React.Fragment, null, type === 'textarea' ? React.createElement("textarea", { className: this.mainClassNames, value: value, onChange: onChange, placeholder: placeholder })
-            :
-                React.createElement("input", { type: type, className: this.mainClassNames, onChange: onChange, placeholder: placeholder })));
+    RvInputLabel.prototype.render = function () {
+        var children = this.props.children;
+        return (React.createElement("label", { className: this.mainClassNames }, children));
     };
-    RvInput.defaultProps = {
-        type: 'text'
-    };
-    return RvInput;
+    return RvInputLabel;
 }(Component));
-//# sourceMappingURL=RvInput.js.map
+//# sourceMappingURL=RvInputLabel.js.map
 
-var RvFormInput = /** @class */ (function (_super) {
-    __extends(RvFormInput, _super);
-    function RvFormInput() {
+var RvInputControl = /** @class */ (function (_super) {
+    __extends(RvInputControl, _super);
+    function RvInputControl() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Object.defineProperty(RvFormInput.prototype, "mainClassNames", {
+    Object.defineProperty(RvInputControl.prototype, "mainClassNames", {
         get: function () {
-            return classnames([
+            var className = this.props.className;
+            return classnames(className, [
                 'w-full'
             ]);
         },
         enumerable: true,
         configurable: true
     });
-    RvFormInput.prototype.render = function () {
+    RvInputControl.prototype.render = function () {
         var _a = this.props, title = _a.title, children = _a.children;
         return (React.createElement("div", { className: this.mainClassNames },
-            title &&
-                React.createElement("label", { className: "block text-sm leading-5 font-medium text-gray-700 mb-1" }, title),
+            title && React.createElement(RvInputLabel, null, title),
             children));
     };
-    return RvFormInput;
+    return RvInputControl;
 }(Component));
-//# sourceMappingURL=RvFormInput.js.map
+//# sourceMappingURL=RvInputControl.js.map
 
 var RvDropdown = /** @class */ (function (_super) {
     __extends(RvDropdown, _super);
@@ -462,10 +493,8 @@ var RvDropdown = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvDropdown.prototype, "mainClassNames", {
         get: function () {
-            var _a = this.props;
-            return classnames([
-                ''
-            ]);
+            var className = this.props.className;
+            return classnames(className);
         },
         enumerable: true,
         configurable: true
@@ -499,8 +528,8 @@ var RvDropdownItem = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvDropdownItem.prototype, "mainClassNames", {
         get: function () {
-            var _a = this.props;
-            return classnames([
+            var className = this.props.className;
+            return classnames(className, [
                 'block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer'
             ]);
         },
@@ -508,8 +537,8 @@ var RvDropdownItem = /** @class */ (function (_super) {
         configurable: true
     });
     RvDropdownItem.prototype.render = function () {
-        var _a = this.props, title = _a.title, href = _a.href;
-        return (React.createElement("a", { href: href, className: this.mainClassNames }, title));
+        var _a = this.props, onClick = _a.onClick, children = _a.children;
+        return (React.createElement("div", { className: this.mainClassNames, onClick: onClick }, children));
     };
     return RvDropdownItem;
 }(Component));
@@ -522,7 +551,8 @@ var RvDropdownSeparator = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvDropdownSeparator.prototype, "mainClassNames", {
         get: function () {
-            return classnames([
+            var className = this.props.className;
+            return classnames(className, [
                 'border-t border-gray-200'
             ]);
         },
@@ -534,6 +564,7 @@ var RvDropdownSeparator = /** @class */ (function (_super) {
     };
     return RvDropdownSeparator;
 }(Component));
+//# sourceMappingURL=RvDropdownSeparator.js.map
 
 var css$1 = "@import \"@fortawesome/fontawesome-free/css/all.css\";\n";
 styleInject(css$1);
@@ -4933,8 +4964,8 @@ var RvIcon = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvIcon.prototype, "mainClassNames", {
         get: function () {
-            var name = this.props.name;
-            return classnames('fas fa-' + name);
+            var _a = this.props, name = _a.name, className = _a.className;
+            return classnames(className, 'fas fa-' + name);
         },
         enumerable: true,
         configurable: true
@@ -4944,7 +4975,7 @@ var RvIcon = /** @class */ (function (_super) {
     };
     return RvIcon;
 }(Component));
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=RvIcon.js.map
 
 var RvCard = /** @class */ (function (_super) {
     __extends(RvCard, _super);
@@ -4953,8 +4984,8 @@ var RvCard = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvCard.prototype, "mainClassNames", {
         get: function () {
-            var norounded = this.props.norounded;
-            return classnames({
+            var _a = this.props, norounded = _a.norounded, className = _a.className;
+            return classnames(className, {
                 'sm:rounded-lg': !norounded
             }, [
                 'shadow overflow-hidden'
@@ -4978,7 +5009,8 @@ var RvCardHeader = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvCardHeader.prototype, "mainClassNames", {
         get: function () {
-            return classnames([
+            var className = this.props.className;
+            return classnames(className, [
                 'px-4 py-5 border-b border-gray-200 sm:px-6'
             ]);
         },
@@ -5000,7 +5032,8 @@ var RvCardBody = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvCardBody.prototype, "mainClassNames", {
         get: function () {
-            return classnames([
+            var className = this.props.className;
+            return classnames(className, [
                 'bg-gray-50 px-4 py-5 sm:px-6'
             ]);
         },
@@ -5015,6 +5048,262 @@ var RvCardBody = /** @class */ (function (_super) {
 }(Component));
 //# sourceMappingURL=RvCardBody.js.map
 
+var RvTable = /** @class */ (function (_super) {
+    __extends(RvTable, _super);
+    function RvTable() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvTable.prototype, "mainClassNames", {
+        get: function () {
+            var _a = this.props, norounded = _a.norounded, className = _a.className;
+            return classnames(className, {
+                'rounded-md': !norounded
+            }, [
+                'flex flex-col'
+            ]);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvTable.prototype.render = function () {
+        var children = this.props.children;
+        return (React.createElement("div", { className: this.mainClassNames },
+            React.createElement("div", { className: "-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8" },
+                React.createElement("div", { className: "align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200" },
+                    React.createElement("table", { className: "min-w-full" }, children)))));
+    };
+    return RvTable;
+}(Component));
+//# sourceMappingURL=RvTable.js.map
+
+var RvTableHeader = /** @class */ (function (_super) {
+    __extends(RvTableHeader, _super);
+    function RvTableHeader() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvTableHeader.prototype, "mainClassNames", {
+        get: function () {
+            var className = this.props.className;
+            return classnames(className);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvTableHeader.prototype.render = function () {
+        var children = this.props.children;
+        return (React.createElement("thead", { className: this.mainClassNames },
+            React.createElement("tr", null, children)));
+    };
+    return RvTableHeader;
+}(Component));
+//# sourceMappingURL=RvTableHeader.js.map
+
+var RvTableHeaderTitle = /** @class */ (function (_super) {
+    __extends(RvTableHeaderTitle, _super);
+    function RvTableHeaderTitle() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvTableHeaderTitle.prototype, "mainClassNames", {
+        get: function () {
+            var className = this.props.className;
+            return classnames(className, [
+                'px-6 py-3',
+                'border-b border-gray-200',
+                'bg-gray-50',
+                'text-left text-xs leading-4 font-medium text-gray-500 uppercase',
+                'tracking-wider'
+            ]);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvTableHeaderTitle.prototype.render = function () {
+        var _a = this.props, align = _a.align, children = _a.children;
+        return (React.createElement("th", { align: align, className: this.mainClassNames }, children));
+    };
+    return RvTableHeaderTitle;
+}(Component));
+//# sourceMappingURL=RvTableHeaderTitle.js.map
+
+var RvTableBody = /** @class */ (function (_super) {
+    __extends(RvTableBody, _super);
+    function RvTableBody() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvTableBody.prototype, "mainClassNames", {
+        get: function () {
+            var className = this.props.className;
+            return classnames(className, 'bg-white');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvTableBody.prototype.render = function () {
+        var children = this.props.children;
+        return (React.createElement("tbody", { className: this.mainClassNames }, children));
+    };
+    return RvTableBody;
+}(Component));
+//# sourceMappingURL=RvTableBody.js.map
+
+var RvTableRow = /** @class */ (function (_super) {
+    __extends(RvTableRow, _super);
+    function RvTableRow() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvTableRow.prototype, "mainClassNames", {
+        get: function () {
+            var className = this.props.className;
+            return classnames(className);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvTableRow.prototype.render = function () {
+        var children = this.props.children;
+        return (React.createElement("tr", { className: this.mainClassNames }, children));
+    };
+    return RvTableRow;
+}(Component));
+//# sourceMappingURL=RvTableRow.js.map
+
+var RvTableCol = /** @class */ (function (_super) {
+    __extends(RvTableCol, _super);
+    function RvTableCol() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvTableCol.prototype, "mainClassNames", {
+        get: function () {
+            var className = this.props.className;
+            return classnames(className, [
+                'px-6 py-4 whitespace-no-wrap border-b border-gray-200'
+            ]);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvTableCol.prototype.render = function () {
+        var _a = this.props, align = _a.align, children = _a.children;
+        return (React.createElement("td", { className: this.mainClassNames, align: align }, children));
+    };
+    return RvTableCol;
+}(Component));
+//# sourceMappingURL=RvTableCol.js.map
+
+var RvPagination = /** @class */ (function (_super) {
+    __extends(RvPagination, _super);
+    function RvPagination() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvPagination.prototype, "mainClassNames", {
+        get: function () {
+            var className = this.props.className;
+            return classnames(className, 'relative z-0 inline-flex shadow-sm');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvPagination.prototype.render = function () {
+        var children = this.props.children;
+        return (React.createElement("span", { className: this.mainClassNames }, children));
+    };
+    return RvPagination;
+}(Component));
+//# sourceMappingURL=RvPagination.js.map
+
+var RvPaginationButton = /** @class */ (function (_super) {
+    __extends(RvPaginationButton, _super);
+    function RvPaginationButton() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvPaginationButton.prototype, "mainClassNames", {
+        get: function () {
+            var _a = this.props, className = _a.className, firstChild = _a.firstChild, lastChild = _a.lastChild;
+            return classnames(className, [
+                'relative inline-flex items-center',
+                'px-4 py-2 -ml-px',
+                'border border-gray-300 focus:border-blue-300',
+                'bg-white active:bg-gray-100',
+                'focus:z-10 focus:outline-none',
+                'focus:shadow-outline-blue',
+                'text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 active:text-gray-700',
+                'transition ease-in-out duration-150',
+            ], {
+                'rounded-l-md': firstChild,
+                'rounded-r-md': lastChild
+            });
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvPaginationButton.prototype.render = function () {
+        var _a = this.props, onClick = _a.onClick, children = _a.children;
+        return (React.createElement("button", { type: "button", onClick: function () { return onClick && onClick(); }, className: this.mainClassNames }, children));
+    };
+    return RvPaginationButton;
+}(Component));
+//# sourceMappingURL=RvPaginationButton.js.map
+
+var RvPaginationSeparator = /** @class */ (function (_super) {
+    __extends(RvPaginationSeparator, _super);
+    function RvPaginationSeparator() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvPaginationSeparator.prototype, "mainClassNames", {
+        get: function () {
+            var className = this.props.className;
+            return classnames(className, [
+                '-ml-px px-4 py-2',
+                'relative inline-flex items-center',
+                'border border-gray-300',
+                'bg-white',
+                'text-sm leading-5 font-medium text-gray-700'
+            ]);
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvPaginationSeparator.prototype.render = function () {
+        return (React.createElement("span", { className: this.mainClassNames }, "..."));
+    };
+    return RvPaginationSeparator;
+}(Component));
+//# sourceMappingURL=RvPaginationSeparator.js.map
+
+var RvPaginationBuilder = /** @class */ (function (_super) {
+    __extends(RvPaginationBuilder, _super);
+    function RvPaginationBuilder() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    Object.defineProperty(RvPaginationBuilder.prototype, "mainClassNames", {
+        get: function () {
+            var className = this.props.className;
+            return classnames(className, 'relative z-0 inline-flex shadow-sm');
+        },
+        enumerable: true,
+        configurable: true
+    });
+    RvPaginationBuilder.prototype.renderButtons = function () {
+        var _a = this.props, total = _a.total, onChange = _a.onChange;
+        var _loop_1 = function (i) {
+            React.createElement(RvPaginationButton, { onClick: function () { return onChange && onChange(i); } }, i);
+        };
+        for (var i = 1; i < total; i++) {
+            _loop_1(i);
+        }
+    };
+    RvPaginationBuilder.prototype.render = function () {
+        return (React.createElement(RvPagination, { className: this.mainClassNames },
+            React.createElement(RvPaginationButton, { firstChild: true },
+                React.createElement(RvIcon, { name: "chevron-left" })),
+            this.renderButtons,
+            React.createElement(RvPaginationButton, { lastChild: true },
+                React.createElement(RvIcon, { name: "chevron-right" }))));
+    };
+    return RvPaginationBuilder;
+}(Component));
+//# sourceMappingURL=RvPaginationBuilder.js.map
+
 var RvLayoutFull = /** @class */ (function (_super) {
     __extends(RvLayoutFull, _super);
     function RvLayoutFull() {
@@ -5022,7 +5311,8 @@ var RvLayoutFull = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvLayoutFull.prototype, "mainClassNames", {
         get: function () {
-            return classnames([
+            var className = this.props.className;
+            return classnames(className, [
                 'w-full h-screen overflow-hidden'
             ]);
         },
@@ -5035,7 +5325,7 @@ var RvLayoutFull = /** @class */ (function (_super) {
     };
     return RvLayoutFull;
 }(Component));
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=RvLayoutFull.js.map
 
 var RvLayoutSplit = /** @class */ (function (_super) {
     __extends(RvLayoutSplit, _super);
@@ -5044,7 +5334,8 @@ var RvLayoutSplit = /** @class */ (function (_super) {
     }
     Object.defineProperty(RvLayoutSplit.prototype, "mainClassNames", {
         get: function () {
-            return classnames([
+            var className = this.props.className;
+            return classnames(className, [
                 'flex h-full'
             ]);
         },
@@ -5070,7 +5361,7 @@ var RvLayoutSplit = /** @class */ (function (_super) {
     };
     return RvLayoutSplit;
 }(Component));
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=RvLayoutSplit.js.map
 
-export { RvButton, RvCard, RvCardBody, RvCardHeader, RvContainer, RvDropdown, RvDropdownItem, RvDropdownSeparator, RvFormInput, RvHeading, RvIcon, RvInput, RvLayoutFull, RvLayoutSplit, RvMenu, RvMenuItem, RvNavbar, RvNavbarContainer, RvNavbarTitle };
+export { RvButton, RvCard, RvCardBody, RvCardHeader, RvContainer, RvDropdown, RvDropdownItem, RvDropdownSeparator, RvHeading, RvIcon, RvInput, RvInputControl, RvInputLabel, RvLayoutFull, RvLayoutSplit, RvMenu, RvMenuItem, RvNavbar, RvNavbarContainer, RvNavbarTitle, RvPagination, RvPaginationBuilder, RvPaginationButton, RvPaginationSeparator, RvTable, RvTableBody, RvTableCol, RvTableHeader, RvTableHeaderTitle, RvTableRow, Colors as ThemeColors };
 //# sourceMappingURL=index.es.js.map

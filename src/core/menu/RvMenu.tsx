@@ -1,7 +1,8 @@
 import React, { Component, ReactNode } from 'react';
 import classNames from 'classnames';
+import { HTMLBasicElementProps } from '../../utils/ElementProps';
 
-interface IProps {
+interface IProps extends HTMLBasicElementProps {
 	title?: string | ReactNode;
 	fluid?: boolean;
 	vertical?: boolean;
@@ -10,9 +11,9 @@ interface IProps {
 export class RvMenu extends Component<IProps> {
 
 	get mainClassNames(): string {
-		const { vertical } = this.props;
+		const { vertical, className } = this.props;
 
-		return classNames([
+		return classNames(className, [
 			'flex items-baseline'
 		], {
 			'flex-wrap px-1 pt-2 pb-3': vertical
